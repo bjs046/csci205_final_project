@@ -21,4 +21,4 @@ custom card. User will also have the option to export and print.
 Also, will be the option to open "packs" and get random cards.
 
 ## How to run it
-Run main program. 
+Run the main program. 
