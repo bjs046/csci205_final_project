@@ -20,7 +20,10 @@ package org.final_project;
 
 import javafx.scene.image.Image;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * the different states of sports that a card can be
@@ -98,6 +101,22 @@ public class Card {
     public void fillSoccerList(){
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
         //appropriate list
+        String fileName = "players_22.csv";
+        File file = new File(fileName);
+        ArrayList<String[]> playerList = new ArrayList<>();
+        try {
+            Scanner scnr = new Scanner(file);
+            // Getting rid of the first line (which is the legend)
+            scnr.nextLine();
+            while (scnr.hasNext()) {
+                String wholeLine = scnr.nextLine();
+                playerList.add(wholeLine.split(","));
+
+            }
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
     }
 
     /**
