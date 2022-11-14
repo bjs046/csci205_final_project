@@ -44,13 +44,16 @@ public class Card {
     public int overall;
 
     /** static array list of overalls for soccer cards */
-    private static ArrayList<Integer> overallListSoccer;
+    //TODO move to child class
+    private static ArrayList<Card> overallListSoccer;
 
     /** static array list of overalls for football cards */
-    private static ArrayList<Integer> overallListFootball;
+    //TODO move to child class
+    private static ArrayList<Card> overallListFootball;
 
     /** static array list of overalls for basketball cards */
-    private static ArrayList<Integer> overallListBasketball;
+    //TODO move to child class
+    private static ArrayList<Card> overallListBasketball;
 
     /** name of data file for soccer cards */
     private static String soccerDataFile = "/players_22.csv";
@@ -60,6 +63,14 @@ public class Card {
 
     /** name of data file for basketball cards */
     private static String basketballDataFile = "/nba2k_full.csv";
+
+    /**
+     * constructor for card object
+     * @param cardSport selected sport for the card
+     */
+    public Card(Sport cardSport) {
+        this.cardSport = cardSport;
+    }
 
     /**
      * goes through array list of overalls and finds the card's overall rating
