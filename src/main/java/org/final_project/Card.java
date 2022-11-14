@@ -21,7 +21,6 @@ package org.final_project;
 import javafx.scene.image.Image;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * the different states of sports that a card can be
@@ -53,13 +52,13 @@ public class Card {
     private static ArrayList<Integer> overallListBasketball;
 
     /** name of data file for soccer cards */
-    private static String soccerDataFile = "/players_22.csv";
+    private static final String soccerDataFile = "/players_22.csv";
 
     /** name of data file for football cards */
-    private static String footballDataFile = "/madden21_ratings.csv";
+    private static final String footballDataFile = "/madden21_ratings.csv";
 
     /** name of data file for basketball cards */
-    private static String basketballDataFile = "/nba2k_full.csv";
+    private static final String basketballDataFile = "/nba2k_full.csv";
 
     /**
      * goes through array list of overalls and finds the card's overall rating
