@@ -45,18 +45,6 @@ public class Card {
     /** rating of the card */
     public int overall;
 
-    /** static array list of overalls for soccer cards */
-    //TODO move to child class
-    private static ArrayList<Card> overallListSoccer;
-
-    /** static array list of overalls for football cards */
-    //TODO move to child class
-    private static ArrayList<Card> overallListFootball;
-
-    /** static array list of overalls for basketball cards */
-    //TODO move to child class
-    private static ArrayList<Card> overallListBasketball;
-
     /** name of data file for soccer cards */
     private static final String soccerDataFile = "/players_22.csv";
 
@@ -145,4 +133,9 @@ public class Card {
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
         //appropriate list
     }
+
+//    public static void main(String[] args){
+//        Card a = new Card(Sport.BASKETBALL);
+//        System.out.println(a.cardSport);
+//    }
 }
