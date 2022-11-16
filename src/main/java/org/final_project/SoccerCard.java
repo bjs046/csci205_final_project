@@ -24,6 +24,9 @@ public class SoccerCard {
     /** static array list of overalls for soccer cards */
     private static ArrayList<Card> overallListSoccer;
 
+    /** name of data file for soccer cards */
+    private static final String soccerDataFile = "/players_22.csv";
+
     public static ArrayList<Card> getOverallListSoccer() {
         return overallListSoccer;
     }

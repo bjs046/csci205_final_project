@@ -24,6 +24,9 @@ public class BasketballCard {
     /** static array list of overalls for basketball cards */
     private static ArrayList<Card> overallListBasketball;
 
+    /** name of data file for basketball cards */
+    private static final String basketballDataFile = "/nba2k_full.csv";
+
     public static ArrayList<Card> getOverallListBasketball() {
         return overallListBasketball;
     }

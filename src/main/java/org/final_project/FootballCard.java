@@ -25,6 +25,9 @@ public class FootballCard {
     /** static array list of overalls for football cards */
     private static ArrayList<Card> overallListFootball;
 
+    /** name of data file for football cards */
+    private static final String footballDataFile = "/madden21_ratings.csv";
+
     public static ArrayList<Card> getOverallListFootball() {
         return overallListFootball;
     }

@@ -45,15 +45,6 @@ public class Card {
     /** rating of the card */
     public int overall;
 
-    /** name of data file for soccer cards */
-    private static final String soccerDataFile = "/players_22.csv";
-
-    /** name of data file for football cards */
-    private static final String footballDataFile = "/madden21_ratings.csv";
-
-    /** name of data file for basketball cards */
-    private static final String basketballDataFile = "/nba2k_full.csv";
-
     /**
      * constructor for card object
      * @param cardSport selected sport for the card
