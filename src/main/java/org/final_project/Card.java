@@ -98,9 +98,12 @@ public class Card {
             Scanner scnr = new Scanner(file);
             // Getting rid of the first line (which is the legend)
             scnr.nextLine();
-            while (scnr.hasNext()) {
+            int x = 0;
+            while (scnr.hasNext()&&x<10) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
+                System.out.println(playerList.get(x));
+                x++;
 
             }
         }
@@ -125,8 +128,9 @@ public class Card {
         //appropriate list
     }
 
-//    public static void main(String[] args){
-//        Card a = new Card(Sport.BASKETBALL);
-//        System.out.println(a.cardSport);
-//    }
+    public static void main(String[] args){
+        Card a = new Card(Sport.BASKETBALL);
+        System.out.println(a.cardSport);
+        a.fillSoccerList();
+    }
 }
