@@ -24,4 +24,7 @@ public class BasketballCard {
     /** static array list of overalls for basketball cards */
     private static ArrayList<Card> overallListBasketball;
 
+    public static ArrayList<Card> getOverallListBasketball() {
+        return overallListBasketball;
+    }
 }

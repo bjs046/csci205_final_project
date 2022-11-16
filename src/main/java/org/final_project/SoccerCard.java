@@ -23,4 +23,8 @@ import java.util.ArrayList;
 public class SoccerCard {
     /** static array list of overalls for soccer cards */
     private static ArrayList<Card> overallListSoccer;
+
+    public static ArrayList<Card> getOverallListSoccer() {
+        return overallListSoccer;
+    }
 }
