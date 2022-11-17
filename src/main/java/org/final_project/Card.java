@@ -31,7 +31,7 @@ enum Sport {
     SOCCER     //Card sport is soccer
 }
 
-public class Card {
+public class    Card {
 
     /** enumeration sport of the card */
     private Sport cardSport;
