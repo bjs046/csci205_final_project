@@ -19,4 +19,14 @@
 package org.final_project;
 
 public class CustomCard {
+    /** team name */
+    String team;
+
+    /** player's full name */
+    String fullName;
+
+    /** player's position */
+    String position;
+
+
 }

@@ -20,7 +20,7 @@ package org.final_project;
 
 import java.util.ArrayList;
 
-public class FootballCard {
+public class FootballCard extends CustomCard{
 
     /** static array list of overalls for football cards */
     private static ArrayList<Card> overallListFootball;
