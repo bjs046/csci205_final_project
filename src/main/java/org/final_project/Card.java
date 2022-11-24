@@ -91,7 +91,7 @@ public class Card {
     public void fillSoccerList(){
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
         //appropriate list
-        String fileName = "players_22.csv";
+        String fileName = "src/main/java/org/final_project/players_22.csv";
         File file = new File(fileName);
         ArrayList<String[]> playerList = new ArrayList<>();
         try {
@@ -102,7 +102,7 @@ public class Card {
             while (scnr.hasNext()&&x<10) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
-                System.out.println(playerList.get(x));
+                System.out.println(playerList.get(x)[5]);
                 x++;
 
             }

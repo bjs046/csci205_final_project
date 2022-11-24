@@ -26,7 +26,7 @@ public class FootballCard extends CustomCard{
     private static ArrayList<Card> overallListFootball;
 
     /** name of data file for football cards */
-    private static final String footballDataFile = "/madden21_ratings.csv";
+    private static final String footballDataFile = "src/main/java/org/final_project/madden21_ratings.csv";
 
     public static ArrayList<Card> getOverallListFootball() {
         return overallListFootball;

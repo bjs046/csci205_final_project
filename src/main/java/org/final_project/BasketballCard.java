@@ -25,7 +25,7 @@ public class BasketballCard extends CustomCard{
     private static ArrayList<Card> overallListBasketball;
 
     /** name of data file for basketball cards */
-    private static final String basketballDataFile = "/nba2k_full.csv";
+    private static final String basketballDataFile = "src/main/java/org/final_project/nba2k-full.csv";
 
     public static ArrayList<Card> getOverallListBasketball() {
         return overallListBasketball;
