@@ -18,9 +18,60 @@
  */
 package org.final_project;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Pack {
+    ArrayList<String[]> soccerPlayers;
+    ArrayList<String[]> basketballPlayers;
+    ArrayList<String[]> footballPlayers;
 
     public Pack() {
-        
+        SoccerCard soccerCard1 = new SoccerCard();
+        BasketballCard basketballCard1 = new BasketballCard();
+        FootballCard footballCard1 = new FootballCard();
+
+        soccerCard1.fillSoccerList();
+        basketballCard1.fillBasketballList();
+        footballCard1.fillFootballList();
+
+        soccerPlayers = soccerCard1.getOverallListSoccer();
+        basketballPlayers = basketballCard1.getOverallListBasketball();
+        footballPlayers = footballCard1.getOverallListFootball();
     }
+
+    /**
+     * generates random number and selects card at that index in the soccer list
+     * @return randomly selected card for pack
+     */
+    public String[] drawSoccerCard() {
+        Random rand = new Random();
+        int randValue = rand.nextInt(soccerPlayers.size() - 1);
+
+        return soccerPlayers.get(randValue);
+    }
+
+    /**
+     * generates random number and selects card at that index in the football list
+     * @return randomly selected card for pack
+     */
+    public String[] drawFootballCard() {
+        Random rand = new Random();
+        int randValue = rand.nextInt(footballPlayers.size()-1);
+
+        return footballPlayers.get(randValue);
+    }
+
+    /**
+     * generates random number and selects card at that index in the basketball list
+     * @return randomly selected card for pack
+     */
+    public String[] drawBasketballCard() {
+        Random rand = new Random();
+        int randValue = rand.nextInt(basketballPlayers.size() - 1);
+
+
+        return basketballPlayers.get(randValue);
+    }
+
 }
