@@ -60,7 +60,7 @@ public class SoccerCard extends Card{
             while (scnr.hasNext()&&x<100) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
-                String[] addedValues = [playerList.get(x)[4];
+                String[] addedValues = [playerList.get(x)[4]];
                 overallListSoccer.add(playerList.get(x)[5]);
                 x++;
 
