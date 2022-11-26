@@ -46,11 +46,10 @@ public class SoccerCard extends Card{
     /**
      * read in soccer data file and fill list with all the cards' overalls
      */
-    public void fillSoccerList(){
+    public static void fillSoccerList(){
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
         //appropriate list
-        String fileName = "src/main/java/org/final_project/players_22.csv";
-        File file = new File(fileName);
+        File file = new File(soccerDataFile);
         ArrayList<String[]> playerList = new ArrayList<>();
         try {
             Scanner scnr = new Scanner(file);
