@@ -27,12 +27,12 @@ import static org.final_project.Sport.SOCCER;
 
 public class SoccerCard extends Card{
     /** static array list of overalls for soccer cards */
-    private static ArrayList<String> overallListSoccer;
+    private static ArrayList<String[]> overallListSoccer = new ArrayList<>();
 
     /** name of data file for soccer cards */
     private static final String soccerDataFile = "src/main/java/org/final_project/players_22.csv";
 
-    public static ArrayList<String> getOverallListSoccer() {
+    public static ArrayList<String[]> getOverallListSoccer() {
         return overallListSoccer;
     }
 
@@ -60,8 +60,10 @@ public class SoccerCard extends Card{
             while (scnr.hasNext()&&x<100) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
-                //String[] addedValues = [];
-                overallListSoccer.add(playerList.get(x)[5]);
+                //name, position, overall
+                String[] addedValues = {playerList.get(x)[2], playerList.get(x)[4], playerList.get(x)[5]};
+                overallListSoccer.add(addedValues);
+                System.out.println(overallListSoccer.get(x)[0] + " " + overallListSoccer.get(x)[1] + " " + overallListSoccer.get(x)[2]);
                 x++;
 
             }

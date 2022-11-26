@@ -78,21 +78,6 @@ public class Card {
         //TODO - sort all three array lists from highest to lowest
     }
 
-    /**
-     * read in football data file and fill list with all the cards' overalls
-     */
-    public void fillFootballList(){
-        //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
-        //appropriate list
-    }
-
-    /**
-     * read in basketball data file and fill list with all the cards' overalls
-     */
-    public void fillBasketballList(){
-        //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
-        //appropriate list
-    }
 
     public void setCardSport(Sport cardSport) {
         this.cardSport = cardSport;
