@@ -3,7 +3,7 @@
  * Fall2022
  * Instructor: Prof. Brian King
  *
- * Name: Junior Weil
+ * Name: Junior Weil, Joseph Helm, Brian Scotto, Brandon Cho
  * Section: 02 - 11 AM
  * Date: 11/15/22
  * Time: 11:25 AM
@@ -19,6 +19,8 @@
 package org.final_project;
 
 import java.util.ArrayList;
+
+import static org.final_project.Sport.FOOTBALL;
 
 public class FootballCard extends Card{
 

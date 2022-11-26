@@ -3,7 +3,7 @@
  * Fall2022
  * Instructor: Prof. Brian King
  *
- * Name: Junior Weil
+ * Name: Junior Weil, Joseph Helm, Brian Scotto, Brandon Cho
  * Section: 02 - 11 AM
  * Date: 11/15/22
  * Time: 11:26 AM
@@ -27,12 +27,12 @@ import static org.final_project.Sport.SOCCER;
 
 public class SoccerCard extends Card{
     /** static array list of overalls for soccer cards */
-    private static ArrayList<Card> overallListSoccer;
+    private static ArrayList<String> overallListSoccer;
 
     /** name of data file for soccer cards */
     private static final String soccerDataFile = "src/main/java/org/final_project/players_22.csv";
 
-    public static ArrayList<Card> getOverallListSoccer() {
+    public static ArrayList<String> getOverallListSoccer() {
         return overallListSoccer;
     }
 
@@ -60,7 +60,7 @@ public class SoccerCard extends Card{
             while (scnr.hasNext()&&x<100) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
-                String[] addedValues = playerList.get(x)[4];
+                String[] addedValues = [playerList.get(x)[4];
                 overallListSoccer.add(playerList.get(x)[5]);
                 x++;
 

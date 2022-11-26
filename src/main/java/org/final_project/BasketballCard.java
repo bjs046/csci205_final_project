@@ -3,7 +3,7 @@
  * Fall2022
  * Instructor: Prof. Brian King
  *
- * Name: Junior Weil
+ * Name: Junior Weil, Joseph Helm, Brian Scotto, Brandon Cho
  * Section: 02 - 11 AM
  * Date: 11/15/22
  * Time: 11:25 AM
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 
 import static org.final_project.Sport.BASKETBALL;
 
-public class BasketballCard extends CustomCard{
+public class BasketballCard extends Card{
     /** static array list of overalls for basketball cards */
     private static ArrayList<Card> overallListBasketball;
 
