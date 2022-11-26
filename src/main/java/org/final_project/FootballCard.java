@@ -20,7 +20,7 @@ package org.final_project;
 
 import java.util.ArrayList;
 
-public class FootballCard extends CustomCard{
+public class FootballCard extends Card{
 
     /** static array list of overalls for football cards */
     private static ArrayList<Card> overallListFootball;
@@ -30,5 +30,12 @@ public class FootballCard extends CustomCard{
 
     public static ArrayList<Card> getOverallListFootball() {
         return overallListFootball;
+    }
+
+    /**
+     *Football card constructor automatically sets card enum to football
+     */
+    public FootballCard(Sport cardSport) {
+        super(FOOTBALL);
     }
 }

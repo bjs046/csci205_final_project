@@ -18,7 +18,7 @@
  */
 package org.final_project;
 
-public class CustomCard {
+public class CustomCard extends Card{
     /** team name */
     String team;
 
@@ -28,5 +28,19 @@ public class CustomCard {
     /** player's position */
     String position;
 
+    /**
+     * constructor for card object
+     *
+     * @param cardSport selected sport for the card
+     */
+    public CustomCard(Sport cardSport) {
+        super(cardSport);
+    }
 
+    /**
+     * used for adding a custom card's overall to the array list for the pack openings
+     */
+    public void addOverall() {
+        //TODO - add new overall for custom cards to the list of overalls
+    }
 }

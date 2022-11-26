@@ -72,44 +72,10 @@ public class Card {
     }
 
     /**
-     * used for adding a custom card's overall to the array list for the pack openings
-     */
-    public void addOverall() {
-        //TODO - add new overall for custom cards to the list of overalls
-    }
-
-    /**
      * sorts the array lists of sports card overalls by rating highest to lowest
      */
     public void sortOverall(){
         //TODO - sort all three array lists from highest to lowest
-    }
-
-    /**
-     * read in soccer data file and fill list with all the cards' overalls
-     */
-    public void fillSoccerList(){
-        //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
-        //appropriate list
-        String fileName = "src/main/java/org/final_project/players_22.csv";
-        File file = new File(fileName);
-        ArrayList<String[]> playerList = new ArrayList<>();
-        try {
-            Scanner scnr = new Scanner(file);
-            // Getting rid of the first line (which is the legend)
-            scnr.nextLine();
-            int x = 0;
-            while (scnr.hasNext()&&x<10) {
-                String wholeLine = scnr.nextLine();
-                playerList.add(wholeLine.split(","));
-                System.out.println(playerList.get(x)[5]);
-                x++;
-
-            }
-        }
-        catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
     }
 
     /**
@@ -128,9 +94,17 @@ public class Card {
         //appropriate list
     }
 
-    public static void main(String[] args){
-        Card a = new Card(Sport.BASKETBALL);
-        System.out.println(a.cardSport);
-        a.fillSoccerList();
+    public void setCardSport(Sport cardSport) {
+        this.cardSport = cardSport;
     }
+
+    public Sport getCardSport() {
+        return cardSport;
+    }
+
+    //    public static void main(String[] args){
+//        Card a = new Card(Sport.BASKETBALL);
+//        System.out.println(a.cardSport);
+//        a.fillSoccerList();
+//    }
 }

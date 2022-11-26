@@ -18,9 +18,14 @@
  */
 package org.final_project;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class SoccerCard extends CustomCard{
+import static org.final_project.Sport.SOCCER;
+
+public class SoccerCard extends Card{
     /** static array list of overalls for soccer cards */
     private static ArrayList<Card> overallListSoccer;
 
@@ -29,5 +34,45 @@ public class SoccerCard extends CustomCard{
 
     public static ArrayList<Card> getOverallListSoccer() {
         return overallListSoccer;
+    }
+
+    /**
+     *Soccer card constructor automatically sets card enum to soccer
+     */
+    public SoccerCard() {
+        super(SOCCER);
+    }
+
+    /**
+     * read in soccer data file and fill list with all the cards' overalls
+     */
+    public void fillSoccerList(){
+        //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
+        //appropriate list
+        String fileName = "src/main/java/org/final_project/players_22.csv";
+        File file = new File(fileName);
+        ArrayList<String[]> playerList = new ArrayList<>();
+        try {
+            Scanner scnr = new Scanner(file);
+            // Getting rid of the first line (which is the legend)
+            scnr.nextLine();
+            int x = 0;
+            while (scnr.hasNext()&&x<100) {
+                String wholeLine = scnr.nextLine();
+                playerList.add(wholeLine.split(","));
+                String[] addedValues = playerList.get(x)[4]
+                overallListSoccer.add(playerList.get(x)[5]);
+                x++;
+
+            }
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args){
+        SoccerCard a = new SoccerCard();
+        a.fillSoccerList();
     }
 }
