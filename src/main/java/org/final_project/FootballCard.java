@@ -71,6 +71,7 @@ public class FootballCard extends Card{
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args){
         FootballCard a = new FootballCard();
         fillFootballList();
