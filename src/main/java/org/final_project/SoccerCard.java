@@ -23,6 +23,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static org.final_project.Sport.BASKETBALL;
 import static org.final_project.Sport.SOCCER;
 
 public class SoccerCard extends Card{
@@ -72,8 +73,18 @@ public class SoccerCard extends Card{
         }
     }
 
+    /**
+     * used for adding a custom card's overall to the array list for the pack openings
+     */
+    public void addOverall(CustomCard newCard) {
+        String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+        overallListSoccer.add(addCard);
+    }
+
     public static void main(String[] args){
         SoccerCard a = new SoccerCard();
         a.fillSoccerList();
+        a.addOverall(new CustomCard(SOCCER));
+        System.out.println(overallListSoccer.get(99)[1]);
     }
 }

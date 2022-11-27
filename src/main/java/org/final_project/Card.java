@@ -78,6 +78,9 @@ public class Card {
         //TODO - sort all three array lists from highest to lowest
     }
 
+    public int getOverall() {
+        return overall;
+    }
 
     public void setCardSport(Sport cardSport) {
         this.cardSport = cardSport;

@@ -37,10 +37,15 @@ public class CustomCard extends Card{
         super(cardSport);
     }
 
-    /**
-     * used for adding a custom card's overall to the array list for the pack openings
-     */
-    public void addOverall() {
-        //TODO - add new overall for custom cards to the list of overalls
+    public String getTeam() {
+        return team;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getPosition() {
+        return position;
     }
 }
