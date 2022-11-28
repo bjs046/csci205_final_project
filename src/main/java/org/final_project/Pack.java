@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Pack {
+    // TODO - should we make this a singlton class?
     ArrayList<String[]> soccerPlayers;
     ArrayList<String[]> basketballPlayers;
     ArrayList<String[]> footballPlayers;
