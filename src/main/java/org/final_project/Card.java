@@ -90,9 +90,9 @@ public class Card {
         return cardSport;
     }
 
-    //    public static void main(String[] args){
-//        Card a = new Card(Sport.BASKETBALL);
+    public static void main(String[] args){
+        Card a = new Card(Sport.BASKETBALL);
 //        System.out.println(a.cardSport);
 //        a.fillSoccerList();
-//    }
+    }
 }

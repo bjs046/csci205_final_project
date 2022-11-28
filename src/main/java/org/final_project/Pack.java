@@ -22,12 +22,25 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Pack {
-    // TODO - should we make this a singlton class?
+
+    /** instance of pack so we can use a singleton design patter */
+    private static Pack instance;
+
     ArrayList<String[]> soccerPlayers;
     ArrayList<String[]> basketballPlayers;
     ArrayList<String[]> footballPlayers;
 
-    public Pack() {
+    public static Pack getinstance(){
+        if (instance == null) {
+            instance = new Pack();
+            return instance;
+        }
+        else {
+            return instance;
+        }
+    }
+
+    private Pack() {
         SoccerCard soccerCard1 = new SoccerCard();
         BasketballCard basketballCard1 = new BasketballCard();
         FootballCard footballCard1 = new FootballCard();

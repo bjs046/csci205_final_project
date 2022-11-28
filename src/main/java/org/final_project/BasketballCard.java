@@ -81,6 +81,6 @@ public class BasketballCard extends Card{
         BasketballCard a = new BasketballCard();
         a.fillBasketballList();
         a.addOverall(new CustomCard(BASKETBALL, "PG", "Junior"));
-        System.out.println(overallListBasketball.get(99)[0]);
+        System.out.println(overallListBasketball.get(99)[0] + " " + overallListBasketball.get(99)[1] + " " + overallListBasketball.get(99)[2]);
     }
 }
