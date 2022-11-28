@@ -84,7 +84,7 @@ public class FootballCard extends Card{
     public static void main(String[] args){
         FootballCard a = new FootballCard();
         fillFootballList();
-        a.addOverall(new CustomCard(FOOTBALL));
-        System.out.println(overallListFootball.get(99)[1]);
+//        a.addOverall(new CustomCard(FOOTBALL));
+//        System.out.println(overallListFootball.get(99)[1]);
     }
 }

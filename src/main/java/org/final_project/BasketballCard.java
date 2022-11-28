@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static org.final_project.Sport.BASKETBALL;
-import static org.final_project.Sport.FOOTBALL;
 
 public class BasketballCard extends Card{
     /** static array list of overalls for basketball cards */
@@ -81,7 +80,7 @@ public class BasketballCard extends Card{
     public static void main(String[] args){
         BasketballCard a = new BasketballCard();
         a.fillBasketballList();
-        a.addOverall(new CustomCard(BASKETBALL));
-        System.out.println(overallListBasketball.get(99)[1]);
+        a.addOverall(new CustomCard(BASKETBALL, "PG", "Junior"));
+        System.out.println(overallListBasketball.get(99)[0]);
     }
 }

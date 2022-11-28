@@ -19,8 +19,6 @@
 package org.final_project;
 
 public class CustomCard extends Card{
-    /** team name */
-    String team;
 
     /** player's full name */
     String fullName;
@@ -33,12 +31,10 @@ public class CustomCard extends Card{
      *
      * @param cardSport selected sport for the card
      */
-    public CustomCard(Sport cardSport) {
+    public CustomCard(Sport cardSport, String pos, String name) {
         super(cardSport);
-    }
-
-    public String getTeam() {
-        return team;
+        this.position = pos;
+        this.fullName = name;
     }
 
     public String getFullName() {
