@@ -63,7 +63,8 @@ public class FootballCard extends Card{
                 //name, position, overall
                 String[] addedValues = {playerList.get(x)[1], playerList.get(x)[3], playerList.get(x)[2]};
                 overallListFootball.add(addedValues);
-                System.out.println(overallListFootball.get(x)[0] + " " + overallListFootball.get(x)[1] + " " + overallListFootball.get(x)[2]);
+                //TODO - delete commented code
+                //System.out.println(overallListFootball.get(x)[0] + " " + overallListFootball.get(x)[1] + " " + overallListFootball.get(x)[2]);
                 x++;
 
             }

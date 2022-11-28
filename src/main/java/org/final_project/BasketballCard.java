@@ -59,7 +59,8 @@ public class BasketballCard extends Card{
                 playerList.add(wholeLine.split(","));
                 String[] addedValues = {playerList.get(x)[0], playerList.get(x)[4], playerList.get(x)[1]};
                 overallListBasketball.add(addedValues);
-                System.out.println(overallListBasketball.get(x)[0] + " " + overallListBasketball.get(x)[1] + " " + overallListBasketball.get(x)[2]);
+                //TODO - delete commented code
+                //System.out.println(overallListBasketball.get(x)[0] + " " + overallListBasketball.get(x)[1] + " " + overallListBasketball.get(x)[2]);
                 x++;
 
             }

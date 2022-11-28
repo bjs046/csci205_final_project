@@ -26,9 +26,13 @@ public class Pack {
     /** instance of pack so we can use a singleton design patter */
     private static Pack instance;
 
+    // TODO - do we need to make copies of the player lists
     ArrayList<String[]> soccerPlayers;
     ArrayList<String[]> basketballPlayers;
     ArrayList<String[]> footballPlayers;
+
+    /** random object for card drawcard methods*/
+    private Random rand;
 
     public static Pack getinstance(){
         if (instance == null) {
@@ -41,6 +45,7 @@ public class Pack {
     }
 
     private Pack() {
+        rand = new Random();
         SoccerCard soccerCard1 = new SoccerCard();
         BasketballCard basketballCard1 = new BasketballCard();
         FootballCard footballCard1 = new FootballCard();
@@ -58,22 +63,48 @@ public class Pack {
      * generates random number and selects card at that index in the soccer list
      * @return randomly selected card for pack
      */
-    public String[] drawSoccerCard() {
-        Random rand = new Random();
+    public ArrayList<String[]> drawSoccerCard(boolean oneCard) {
+        //generate random number to select card from overall list
         int randValue = rand.nextInt(soccerPlayers.size() - 1);
-
-        return soccerPlayers.get(randValue);
+        ArrayList<String[]> packCard = new ArrayList<>();
+        //Fill array with one card
+        if (oneCard == true) {
+            packCard.add(soccerPlayers.get(randValue));
+            return packCard;
+        }
+        //Fill array with three cards
+        else {
+            packCard.add(soccerPlayers.get(randValue));
+            randValue = rand.nextInt(soccerPlayers.size() - 1);
+            packCard.add(soccerPlayers.get(randValue));
+            randValue = rand.nextInt(soccerPlayers.size() - 1);
+            packCard.add(soccerPlayers.get(randValue));
+            return packCard;
+        }
     }
 
     /**
      * generates random number and selects card at that index in the football list
      * @return randomly selected card for pack
      */
-    public String[] drawFootballCard() {
-        Random rand = new Random();
-        int randValue = rand.nextInt(footballPlayers.size()-1);
-
-        return footballPlayers.get(randValue);
+    public ArrayList<String[]> drawFootballCard(boolean oneCard) {
+        //generate random number to select card from overall list
+        int randValue = rand.nextInt(footballPlayers.size() - 1);
+        ArrayList<String[]> packCard = new ArrayList<>();
+        //Fill array with one card
+        if (oneCard == true) {
+            packCard.add(footballPlayers.get(randValue));
+            return packCard;
+        }
+        //Fill array with three cards
+        else {
+            packCard.add(footballPlayers.get(randValue));
+            randValue = rand.nextInt(footballPlayers.size() - 1);
+            packCard.add(footballPlayers.get(randValue));
+            randValue = rand.nextInt(footballPlayers.size() - 1);
+            packCard.add(footballPlayers.get(randValue));
+            return packCard;
+        }
     }
 
     /**
@@ -82,7 +113,6 @@ public class Pack {
      */
     public ArrayList<String[]> drawBasketballCard(boolean oneCard) {
         //generate random number to select card from overall list
-        Random rand = new Random();
         int randValue = rand.nextInt(basketballPlayers.size() - 1);
         ArrayList<String[]> packCard = new ArrayList<>();
         //Fill array with one card
@@ -101,4 +131,7 @@ public class Pack {
         }
     }
 
+    public static void main(String[] args){
+        System.out.println(getinstance().drawBasketballCard(true).get(0)[0]);
+    }
 }
