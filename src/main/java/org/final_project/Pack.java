@@ -67,15 +67,24 @@ public class Pack {
      * generates random number and selects card at that index in the basketball list
      * @return randomly selected card for pack
      */
-    public String[] drawBasketballCard(boolean numCard) {
-        //TODO - add boolean to choose between a pack with one card or three cards
+    public ArrayList<String[]> drawBasketballCard(boolean oneCard) {
+        //generate random number to select card from overall list
         Random rand = new Random();
         int randValue = rand.nextInt(basketballPlayers.size() - 1);
-        if (numCard == true) {
-            return basketballPlayers.get(randValue);
+        ArrayList<String[]> packCard = new ArrayList<>();
+        //Fill array with one card
+        if (oneCard == true) {
+            packCard.add(basketballPlayers.get(randValue));
+            return packCard;
         }
+        //Fill array with three cards
         else {
-            //TODO make array and fill it with three card
+            packCard.add(basketballPlayers.get(randValue));
+            randValue = rand.nextInt(basketballPlayers.size() - 1);
+            packCard.add(basketballPlayers.get(randValue));
+            randValue = rand.nextInt(basketballPlayers.size() - 1);
+            packCard.add(basketballPlayers.get(randValue));
+            return packCard;
         }
     }
 
