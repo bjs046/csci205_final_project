@@ -71,13 +71,6 @@ public class Card {
         return null;
     }
 
-    /**
-     * sorts the array lists of sports card overalls by rating highest to lowest
-     */
-    public void sortOverall(){
-        //TODO - sort all three array lists from highest to lowest
-    }
-
     public int getOverall() {
         return overall;
     }

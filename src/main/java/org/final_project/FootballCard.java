@@ -23,6 +23,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
 import static org.final_project.Sport.FOOTBALL;
 
 public class FootballCard extends Card{
@@ -82,10 +83,30 @@ public class FootballCard extends Card{
         overallListFootball.add(addCard);
     }
 
+    /**
+     * sorts the array lists of sports card overalls by rating highest to lowest
+     */
+    public void sortOverall(){
+        String temp;
+        for (int i = 0; i < overallListFootball.size()-1; i++) {
+            for (int j = 0; j < overallListFootball.size()-i-1; j++) {
+                if (parseInt(overallListFootball.get(j)[2])>parseInt(overallListFootball.get(j+1)[2])){
+                    temp = overallListFootball.get(j)[2];
+                    overallListFootball.get(j)[2] = overallListFootball.get(j+1)[2];
+                    overallListFootball.get(j+1)[2] = temp;
+                }
+            }
+        }
+    }
+
     public static void main(String[] args){
         FootballCard a = new FootballCard();
         fillFootballList();
-//        a.addOverall(new CustomCard(FOOTBALL));
-//        System.out.println(overallListFootball.get(99)[1]);
+       // a.addOverall(new CustomCard(FOOTBALL));
+        //System.out.println(overallListFootball.get(99)[1]);
+        a.sortOverall();
+        for (int i = 0; i < overallListFootball.size()-1; i++) {
+            System.out.println(i + ": " + overallListFootball.get(i)[2]);
+        }
     }
 }
