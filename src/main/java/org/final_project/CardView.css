@@ -1,0 +1,12 @@
+.root {
+    -fx-pref-width: 300;
+    -fx-pref-height: 150;
+    -fx-padding: 15px;
+}
+
+#titlePane {
+    -fx-orientation: horizontal;
+    -fx-alignment: center;
+    -fx-hgap: 10
+}
+
