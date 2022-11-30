@@ -71,6 +71,15 @@ public class Card {
         return null;
     }
 
+    /**
+     * used for adding a custom card's overall to the array list for the pack openings
+     */
+   // public void addOverall(CustomCard newCard) {
+        //if (newCard.getCardSport().equals(Sport.BASKETBALL))
+        //String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+        //BasketballCard.getOverallListBasketball().add(addCard);
+   //}
+
     public int getOverall() {
         return overall;
     }

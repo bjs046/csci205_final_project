@@ -79,30 +79,10 @@ public class BasketballCard extends Card{
         overallListBasketball.add(addCard);
     }
 
-    /**
-     * sorts the array lists of sports card overalls by rating highest to lowest
-     */
-    public void sortOverall(){
-        String temp;
-        for (int i = 0; i < overallListBasketball.size()-1; i++) {
-            for (int j = 0; j < overallListBasketball.size()-i-1; j++) {
-                if (parseInt(overallListBasketball.get(j)[2])>parseInt(overallListBasketball.get(j+1)[2])){
-                    temp = overallListBasketball.get(j)[2];
-                    overallListBasketball.get(j)[2] = overallListBasketball.get(j+1)[2];
-                    overallListBasketball.get(j+1)[2] = temp;
-                }
-            }
-        }
-    }
-
     public static void main(String[] args){
         BasketballCard a = new BasketballCard();
         a.fillBasketballList();
 //        a.addOverall(new CustomCard(BASKETBALL, "PG", "Junior"));
 //        System.out.println(overallListBasketball.get(99)[0] + " " + overallListBasketball.get(99)[1] + " " + overallListBasketball.get(99)[2]);
-        a.sortOverall();
-        for (int i = 0; i < overallListBasketball.size()-1; i++) {
-            System.out.println(i + ": " + overallListBasketball.get(i)[2]);
-        }
     }
 }
