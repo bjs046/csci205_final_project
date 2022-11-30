@@ -28,7 +28,7 @@ import static org.final_project.Sport.BASKETBALL;
 
 public class BasketballCard extends Card{
     /** static array list of overalls for basketball cards */
-    private static ArrayList<String[]> overallListBasketball = new ArrayList<>();
+    public static ArrayList<String[]> overallListBasketball = new ArrayList<>();
 
     /** name of data file for basketball cards */
     private static final String basketballDataFile = "src/main/java/org/final_project/nba2k-full.csv";
@@ -44,6 +44,8 @@ public class BasketballCard extends Card{
         super(BASKETBALL);
 
     }
+
+
 
     public static void fillBasketballList(){
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the

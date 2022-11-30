@@ -74,11 +74,19 @@ public class Card {
     /**
      * used for adding a custom card's overall to the array list for the pack openings
      */
-   // public void addOverall(CustomCard newCard) {
-        //if (newCard.getCardSport().equals(Sport.BASKETBALL))
-        //String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
-        //BasketballCard.getOverallListBasketball().add(addCard);
-   //}
+    public void addOverall(CustomCard newCard) {
+        //check the card type and add to the appropriate list
+        if (newCard.getCardSport().equals(Sport.BASKETBALL)) {
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            BasketballCard.getOverallListBasketball().add(addCard);
+        } else if (newCard.getCardSport().equals(Sport.SOCCER)) {
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            SoccerCard.getOverallListSoccer().add(addCard);
+        }else{
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            FootballCard.getOverallListFootball().add(addCard);
+        }
+    }
 
     public int getOverall() {
         return overall;
@@ -93,9 +101,10 @@ public class Card {
     }
 
     public static void main(String[] args){
-        Card a = new Card(Sport.BASKETBALL);
-//        System.out.println(a.cardSport);
-//        a.fillSoccerList();
+        BasketballCard a = new BasketballCard();
+        //System.out.println(a.cardSport);
+        a.addOverall(new CustomCard(Sport.BASKETBALL,"PG","Junior"));
+        System.out.println(a);
     }
     
 
