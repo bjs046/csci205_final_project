@@ -23,6 +23,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
 import static org.final_project.Sport.SOCCER;
 
 public class SoccerCard extends Card{
@@ -80,6 +81,7 @@ public class SoccerCard extends Card{
         String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
         overallListSoccer.add(addCard);
     }
+
 
     public static void main(String[] args){
         SoccerCard a = new SoccerCard();
