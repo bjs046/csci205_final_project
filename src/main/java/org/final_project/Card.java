@@ -88,4 +88,6 @@ public class Card {
 //        System.out.println(a.cardSport);
 //        a.fillSoccerList();
     }
+    
+
 }
