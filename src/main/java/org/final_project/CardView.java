@@ -27,6 +27,11 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
 
 public class CardView extends Application {
 
@@ -81,7 +86,13 @@ public class CardView extends Application {
     }
 
     public void initStyling(){
+
         titlePane.setAlignment(Pos.CENTER);
+        try{
+            Image img = ImageIO.read(new File("sportscard.jpg"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
@@ -94,7 +105,7 @@ public class CardView extends Application {
 
 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("org/final_project/CardView.css");
+        scene.getStylesheets().add("java/org/final_project/CardView.css");
 
 
         primaryStage.setTitle("Player Card Creator");
