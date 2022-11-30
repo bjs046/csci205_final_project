@@ -49,8 +49,6 @@ public class FootballCard extends Card{
      * read in soccer data file and fill list with all the cards' overalls
      */
     public static void fillFootballList(){
-        //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
-        //appropriate list
         File file = new File(footballDataFile);
         ArrayList<String[]> playerList = new ArrayList<>();
         try {
@@ -83,30 +81,10 @@ public class FootballCard extends Card{
         overallListFootball.add(addCard);
     }
 
-    /**
-     * sorts the array lists of sports card overalls by rating highest to lowest
-     */
-    public void sortOverall(){
-        String temp;
-        for (int i = 0; i < overallListFootball.size()-1; i++) {
-            for (int j = 0; j < overallListFootball.size()-i-1; j++) {
-                if (parseInt(overallListFootball.get(j)[2])>parseInt(overallListFootball.get(j+1)[2])){
-                    temp = overallListFootball.get(j)[2];
-                    overallListFootball.get(j)[2] = overallListFootball.get(j+1)[2];
-                    overallListFootball.get(j+1)[2] = temp;
-                }
-            }
-        }
-    }
-
     public static void main(String[] args){
         FootballCard a = new FootballCard();
         fillFootballList();
        // a.addOverall(new CustomCard(FOOTBALL));
         //System.out.println(overallListFootball.get(99)[1]);
-        a.sortOverall();
-        for (int i = 0; i < overallListFootball.size()-1; i++) {
-            System.out.println(i + ": " + overallListFootball.get(i)[2]);
-        }
     }
 }

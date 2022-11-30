@@ -82,27 +82,11 @@ public class SoccerCard extends Card{
         overallListSoccer.add(addCard);
     }
 
-    public void sortOverall(){
-        String temp;
-        for (int i = 0; i < overallListSoccer.size()-1; i++) {
-            for (int j = 0; j < overallListSoccer.size()-i-1; j++) {
-                if (parseInt(overallListSoccer.get(j)[2])>parseInt(overallListSoccer.get(j+1)[2])){
-                    temp = overallListSoccer.get(j)[2];
-                    overallListSoccer.get(j)[2] = overallListSoccer.get(j+1)[2];
-                    overallListSoccer.get(j+1)[2] = temp;
-                }
-            }
-        }
-    }
 
     public static void main(String[] args){
         SoccerCard a = new SoccerCard();
         a.fillSoccerList();
 //        a.addOverall(new CustomCard(SOCCER));
 //        System.out.println(overallListSoccer.get(99)[1]);
-        a.sortOverall();
-        for (int i = 0; i < overallListSoccer.size()-1; i++) {
-            System.out.println(i + ": " + overallListSoccer.get(i)[2]);
-        }
     }
 }
