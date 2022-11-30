@@ -1,4 +1,4 @@
-package org.final_project;
+package org.final_project.start_screen;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +18,7 @@ public class CardSimMain extends Application {
     public void start(Stage primaryStage) throws IOException {
         //Loads the FXMLfile. Obtain the root of the scene graph
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/CardSim.fxml"));
+        loader.setLocation(getClass().getResource("/org/final_project/start_screen/CardSim.fxml"));
         Parent root = loader.load();
 
         // Set up the stage and show it

@@ -16,7 +16,7 @@
  *
  * ****************************************
  */
-package org.final_project;
+package org.final_project.start_screen;
 
 import java.net.URL;
 import java.util.ResourceBundle;
