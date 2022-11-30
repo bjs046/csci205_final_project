@@ -33,6 +33,9 @@ public class SoccerCard extends Card{
     /** name of data file for soccer cards */
     private static final String soccerDataFile = "src/main/java/org/final_project/players_22.csv";
 
+    /** name of image link file for soccer cards*/
+    private static final String soccerImageFile = "src/main/java/org/final_project/SoccerImages.txt";
+
     public static ArrayList<String[]> getOverallListSoccer() {
         return overallListSoccer;
     }
@@ -51,6 +54,7 @@ public class SoccerCard extends Card{
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
         //appropriate list
         File file = new File(soccerDataFile);
+        File file2 = new File(soccerImageFile);
         ArrayList<String[]> playerList = new ArrayList<>();
         try {
             Scanner scnr = new Scanner(file);
@@ -74,13 +78,6 @@ public class SoccerCard extends Card{
         }
     }
 
-    /**
-     * used for adding a custom card's overall to the array list for the pack openings
-     */
-    public void addOverall(CustomCard newCard) {
-        String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
-        overallListSoccer.add(addCard);
-    }
 
 
     public static void main(String[] args){

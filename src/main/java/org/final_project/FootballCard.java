@@ -73,13 +73,6 @@ public class FootballCard extends Card{
         }
     }
 
-    /**
-     * used for adding a custom card's overall to the array list for the pack openings
-     */
-    public void addOverall(CustomCard newCard) {
-        String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
-        overallListFootball.add(addCard);
-    }
 
     public static void main(String[] args){
         FootballCard a = new FootballCard();
