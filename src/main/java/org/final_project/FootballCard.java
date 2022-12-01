@@ -73,6 +73,7 @@ public class FootballCard extends Card{
         }
     }
 
+
     /**
      * used for adding a custom card's overall to the array list for the pack openings
      */

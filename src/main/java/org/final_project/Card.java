@@ -25,6 +25,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static org.final_project.BasketballCard.fillBasketballList;
+
 /**
  * the different states of sports that a card can be
  */
@@ -74,11 +76,18 @@ public class Card {
     /**
      * used for adding a custom card's overall to the array list for the pack openings
      */
-   // public void addOverall(CustomCard newCard) {
-        //if (newCard.getCardSport().equals(Sport.BASKETBALL))
-        //String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
-        //BasketballCard.getOverallListBasketball().add(addCard);
-   //}
+    public void addOverall(CustomCard newCard) {
+        if (newCard.getCardSport().equals(Sport.BASKETBALL)) {
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            BasketballCard.getOverallListBasketball().add(addCard);
+        }else if (newCard.getCardSport().equals(Sport.FOOTBALL)){
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            FootballCard.getOverallListFootball().add(addCard);
+        }else {
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            SoccerCard.getOverallListSoccer().add(addCard);
+        }
+   }
 
     public int getOverall() {
         return overall;
@@ -93,9 +102,14 @@ public class Card {
     }
 
     public static void main(String[] args){
-        Card a = new Card(Sport.BASKETBALL);
-//        System.out.println(a.cardSport);
-//        a.fillSoccerList();
+        CustomCard a = new CustomCard(Sport.BASKETBALL, "PG", "Junior");
+        BasketballCard b = new BasketballCard();
+        fillBasketballList();
+        a.addOverall(a);
+        for (int i = 0; i < b.getOverallListBasketball().size(); i++) {
+            System.out.println(i + ": " + b.getOverallListBasketball().get(i)[0] + " " + b.getOverallListBasketball().get(i)[1]
+            + " " + b.getOverallListBasketball().get(i)[2]);
+        }
     }
     
 
