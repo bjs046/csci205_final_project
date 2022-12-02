@@ -31,7 +31,7 @@ public class SoccerCard extends Card{
     private static ArrayList<String[]> overallListSoccer = new ArrayList<>();
 
     /** name of data file for soccer cards */
-    private static final String soccerDataFile = "src/main/java/org/final_project/players_22.csv";
+    private static final String soccerDataFile = "src/main/resources/players_22.csv";
 
     public static ArrayList<String[]> getOverallListSoccer() {
         return overallListSoccer;
