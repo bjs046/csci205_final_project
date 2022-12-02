@@ -56,15 +56,6 @@ public class Card {
     }
 
     /**
-     * goes through array list of overalls and finds the card's overall rating
-     * @return integer value of card's rating
-     */
-    private int findOverall() {
-        //TODO - read in data file associated with sport and find card's overall
-        return 0;
-    }
-
-    /**
      * goes through array list of players and finds the image of the player's card
      * @return image of the player's card
      */
