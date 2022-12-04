@@ -20,8 +20,16 @@ package org.final_project;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.util.List;
 
 import static java.lang.Integer.parseInt;
 import static org.final_project.Sport.SOCCER;
@@ -31,7 +39,7 @@ public class SoccerCard extends Card{
     private static ArrayList<String[]> overallListSoccer = new ArrayList<>();
 
     /** name of data file for soccer cards */
-    private static final String soccerDataFile = "src/main/resources/players_22.csv";
+    private static final String soccerDataFile = "src/main/java/org/final_project/soccerfile.csv";
 
     /** name of image link file for soccer cards*/
     private static final String soccerImageFile = "src/main/java/org/final_project/SoccerImages.txt";

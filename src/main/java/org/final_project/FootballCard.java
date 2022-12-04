@@ -32,7 +32,7 @@ public class FootballCard extends Card{
     private static ArrayList<String[]> overallListFootball = new ArrayList<>();
 
     /** name of data file for football cards */
-    private static final String footballDataFile = "src/main/resources/madden21_ratings.csv";
+    private static final String footballDataFile = "src/main/java/org/final_project/madden21_ratings.csv";
 
     public static ArrayList<String[]> getOverallListFootball() {
         return overallListFootball;
@@ -78,6 +78,6 @@ public class FootballCard extends Card{
         FootballCard a = new FootballCard();
         fillFootballList();
        // a.addOverall(new CustomCard(FOOTBALL));
-        //System.out.println(overallListFootball.get(99)[1]);
+        System.out.println(overallListFootball.get(98)[0]);
     }
 }
