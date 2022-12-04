@@ -44,6 +44,7 @@ public class SoccerCard extends Card{
     /** name of image link file for soccer cards*/
     private static final String soccerImageFile = "src/main/java/org/final_project/SoccerImages.txt";
 
+
     public static ArrayList<String[]> getOverallListSoccer() {
         return overallListSoccer;
     }
@@ -55,14 +56,10 @@ public class SoccerCard extends Card{
         super(SOCCER);
     }
 
-    /**
-     * read in soccer data file and fill list with all the cards' overalls
-     */
     public static void fillSoccerList(){
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
         //appropriate list
         File file = new File(soccerDataFile);
-        File file2 = new File(soccerImageFile);
         ArrayList<String[]> playerList = new ArrayList<>();
         try {
             Scanner scnr = new Scanner(file);
@@ -72,11 +69,10 @@ public class SoccerCard extends Card{
             while (scnr.hasNext()&&x<100) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
-                //name, position, overall
                 String[] addedValues = {playerList.get(x)[2], playerList.get(x)[4], playerList.get(x)[5]};
                 overallListSoccer.add(addedValues);
                 //TODO - delete commented code
-                //System.out.println(overallListSoccer.get(x)[0] + " " + overallListSoccer.get(x)[1] + " " + overallListSoccer.get(x)[2]);
+                System.out.println(overallListSoccer.get(x)[0] + " " + overallListSoccer.get(x)[1] + " " + overallListSoccer.get(x)[2]);
                 x++;
 
             }
@@ -91,7 +87,7 @@ public class SoccerCard extends Card{
     public static void main(String[] args){
         SoccerCard a = new SoccerCard();
         a.fillSoccerList();
-//        a.addOverall(new CustomCard(SOCCER));
-//        System.out.println(overallListSoccer.get(99)[1]);
+        //a.addOverall(new CustomCard(SOCCER, "ST", "junior"));
+        //System.out.println(overallListSoccer.get(98)[1]);
     }
 }

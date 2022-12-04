@@ -31,7 +31,7 @@ public class BasketballCard extends Card{
     public static ArrayList<String[]> overallListBasketball = new ArrayList<>();
 
     /** name of data file for basketball cards */
-    private static final String basketballDataFile = "src/main/resources/nba2k-full.csv";
+    private static final String basketballDataFile = "src/main/java/org/final_project/nba2k-full.csv";
 
     public static ArrayList<String[]> getOverallListBasketball() {
         return overallListBasketball;
@@ -63,7 +63,7 @@ public class BasketballCard extends Card{
                 String[] addedValues = {playerList.get(x)[0], playerList.get(x)[4], playerList.get(x)[1]};
                 overallListBasketball.add(addedValues);
                 //TODO - delete commented code
-                //System.out.println(overallListBasketball.get(x)[0] + " " + overallListBasketball.get(x)[1] + " " + overallListBasketball.get(x)[2]);
+                System.out.println(overallListBasketball.get(x)[0] + " " + overallListBasketball.get(x)[1] + " " + overallListBasketball.get(x)[2]);
                 x++;
 
             }
