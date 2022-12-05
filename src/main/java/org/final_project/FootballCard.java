@@ -23,7 +23,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
 import static org.final_project.Sport.FOOTBALL;
 
 public class FootballCard extends Card{
@@ -46,7 +45,9 @@ public class FootballCard extends Card{
     }
 
     /**
-     * read in soccer data file and fill list with all the cards' overalls
+     * read in soccer data file from pathway and fills array list with all the cards' overalls.  It splits
+     * the line in the data file into an array then we access the indices with the information we need to then
+     * copy over into the array list with all the other players
      */
     public static void fillFootballList(){
         File file = new File(footballDataFile);
@@ -62,8 +63,6 @@ public class FootballCard extends Card{
                 //name, position, overall
                 String[] addedValues = {playerList.get(x)[1], playerList.get(x)[3], playerList.get(x)[2]};
                 overallListFootball.add(addedValues);
-                //TODO - delete commented code
-                //System.out.println(overallListFootball.get(x)[0] + " " + overallListFootball.get(x)[1] + " " + overallListFootball.get(x)[2]);
                 x++;
 
             }
@@ -71,13 +70,5 @@ public class FootballCard extends Card{
         catch (FileNotFoundException e){
             e.printStackTrace();
         }
-    }
-
-
-    public static void main(String[] args){
-        FootballCard a = new FootballCard();
-        fillFootballList();
-       // a.addOverall(new CustomCard(FOOTBALL));
-        //System.out.println(overallListFootball.get(98)[0]);
     }
 }
