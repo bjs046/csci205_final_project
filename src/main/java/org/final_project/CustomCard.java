@@ -26,15 +26,19 @@ public class CustomCard extends Card{
     /** player's position */
     String position;
 
+    /** player's overall */
+    String overall;
+
     /**
      * constructor for card object
      *
      * @param cardSport selected sport for the card
      */
-    public CustomCard(Sport cardSport, String pos, String name) {
+    public CustomCard(Sport cardSport, String pos, String name, String overall) {
         super(cardSport);
         this.position = pos;
         this.fullName = name;
+        this.overall = overall;
     }
 
     public String getFullName() {

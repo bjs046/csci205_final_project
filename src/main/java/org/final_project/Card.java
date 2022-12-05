@@ -25,15 +25,6 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * the different states of sports that a card can be
- */
-enum Sport {
-    BASKETBALL,     //Card sport is basketball
-    FOOTBALL,     //Card sport is football
-    SOCCER     //Card sport is soccer
-}
-
 public class Card {
 
     /** enumeration sport of the card */
@@ -41,9 +32,6 @@ public class Card {
 
     /** image that will cover the card */
     public Image cardImage;
-
-    /** rating of the card */
-    public int overall;
 
     /**
      * constructor for card object
@@ -68,19 +56,15 @@ public class Card {
     public void addOverall(CustomCard newCard) {
         //check the card type and add to the appropriate list
         if (newCard.getCardSport().equals(Sport.BASKETBALL)) {
-            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            String[] addCard = {newCard.getFullName(), newCard.getPosition()};
             BasketballCard.getOverallListBasketball().add(addCard);
         } else if (newCard.getCardSport().equals(Sport.SOCCER)) {
-            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            String[] addCard = {newCard.getFullName(), newCard.getPosition()};
             SoccerCard.getOverallListSoccer().add(addCard);
         }else{
-            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            String[] addCard = {newCard.getFullName(), newCard.getPosition()};
             FootballCard.getOverallListFootball().add(addCard);
         }
-    }
-
-    public int getOverall() {
-        return overall;
     }
 
     public void setCardSport(Sport cardSport) {
@@ -95,7 +79,7 @@ public class Card {
     public static void main(String[] args){
         BasketballCard a = new BasketballCard();
         //System.out.println(a.cardSport);
-        a.addOverall(new CustomCard(Sport.BASKETBALL,"PG","Junior"));
+        //a.addOverall(new CustomCard(Sport.BASKETBALL,"PG","Junior"));
         System.out.println(a);
     }
     
