@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.final_project.CardSimController">
+   <children>
+      <ImageView fx:id="soccerBackground" fitHeight="439.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@soccerbackground.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="soccerCard" arcHeight="5.0" arcWidth="5.0" fill="#efdd19" height="250.0" layoutX="225.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+   </children>
+</AnchorPane>

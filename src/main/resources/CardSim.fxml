@@ -24,6 +24,6 @@
             <Font name="HP Simplified" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="optionsButton" layoutX="242.0" layoutY="260.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="116.0" text="Options" />
+      <Button fx:id="optionsButton" layoutX="242.0" layoutY="260.0" mnemonicParsing="false" onAction="#changeSceneOptions" prefHeight="44.0" prefWidth="116.0" text="Options" />
    </children>
 </AnchorPane>
