@@ -204,22 +204,23 @@ public class CardSimController {
         soccerWindow.setScene(soccerScene);
         soccerWindow.show();
 
-        public void initialize(URL url, ResourceBundle rb) {
-            // Running pack for soccer
-            Pack testPack = new Pack();
-            ArrayList<String[]> cardDrawn = testPack.drawSoccerCard(true);
-            String soccerCardName = cardDrawn.get(0)[0];
-            String soccerCardPosition = cardDrawn.get(0)[1];
-            String soccerCardOverall = cardDrawn.get(0)[2];
-            String soccerCardImage = testPack.URLLink.get(0);
+
+        // Running pack for soccer
+        Pack testPack = new Pack();
+        ArrayList<String[]> cardDrawn = testPack.drawSoccerCard(true);
+        String soccerCardName = cardDrawn.get(0)[0];
+        String soccerCardPosition = cardDrawn.get(0)[1];
+        String soccerCardOverall = cardDrawn.get(0)[2];
+        String soccerCardImage = testPack.URLLink.get(0);
 
         try (InputStream in = new URL(soccerCardImage).openStream()) {
             Files.copy(in, Paths.get("/playerpfp.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
+
 
 
 
