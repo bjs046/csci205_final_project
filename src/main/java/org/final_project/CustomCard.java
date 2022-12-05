@@ -21,13 +21,13 @@ package org.final_project;
 public class CustomCard extends Card{
 
     /** player's full name */
-    String fullName;
+    private String fullName;
 
     /** player's position */
-    String position;
+    private String position;
 
     /** player's overall */
-    String overall;
+    private String overall;
 
     /**
      * constructor for card object
@@ -47,5 +47,9 @@ public class CustomCard extends Card{
 
     public String getPosition() {
         return position;
+    }
+
+    public String getOverall() {
+        return overall;
     }
 }

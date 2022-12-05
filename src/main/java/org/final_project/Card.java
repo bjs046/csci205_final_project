@@ -56,13 +56,13 @@ public class Card {
     public void addOverall(CustomCard newCard) {
         //check the card type and add to the appropriate list
         if (newCard.getCardSport().equals(Sport.BASKETBALL)) {
-            String[] addCard = {newCard.getFullName(), newCard.getPosition()};
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), newCard.getOverall()};
             BasketballCard.getOverallListBasketball().add(addCard);
         } else if (newCard.getCardSport().equals(Sport.SOCCER)) {
-            String[] addCard = {newCard.getFullName(), newCard.getPosition()};
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), newCard.getOverall()};
             SoccerCard.getOverallListSoccer().add(addCard);
         }else{
-            String[] addCard = {newCard.getFullName(), newCard.getPosition()};
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), newCard.getOverall()};
             FootballCard.getOverallListFootball().add(addCard);
         }
     }
