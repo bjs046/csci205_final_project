@@ -54,15 +54,6 @@ public class Card {
     }
 
     /**
-     * goes through array list of overalls and finds the card's overall rating
-     * @return integer value of card's rating
-     */
-    private int findOverall() {
-        //TODO - read in data file associated with sport and find card's overall
-        return 0;
-    }
-
-    /**
      * goes through array list of players and finds the image of the player's card
      * @return image of the player's card
      */
@@ -74,11 +65,19 @@ public class Card {
     /**
      * used for adding a custom card's overall to the array list for the pack openings
      */
-   // public void addOverall(CustomCard newCard) {
-        //if (newCard.getCardSport().equals(Sport.BASKETBALL))
-        //String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
-        //BasketballCard.getOverallListBasketball().add(addCard);
-   //}
+    public void addOverall(CustomCard newCard) {
+        //check the card type and add to the appropriate list
+        if (newCard.getCardSport().equals(Sport.BASKETBALL)) {
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            BasketballCard.getOverallListBasketball().add(addCard);
+        } else if (newCard.getCardSport().equals(Sport.SOCCER)) {
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            SoccerCard.getOverallListSoccer().add(addCard);
+        }else{
+            String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
+            FootballCard.getOverallListFootball().add(addCard);
+        }
+    }
 
     public int getOverall() {
         return overall;
@@ -93,9 +92,10 @@ public class Card {
     }
 
     public static void main(String[] args){
-        Card a = new Card(Sport.BASKETBALL);
-//        System.out.println(a.cardSport);
-//        a.fillSoccerList();
+        BasketballCard a = new BasketballCard();
+        //System.out.println(a.cardSport);
+        a.addOverall(new CustomCard(Sport.BASKETBALL,"PG","Junior"));
+        System.out.println(a);
     }
     
 

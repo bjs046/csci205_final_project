@@ -18,8 +18,12 @@
  */
 package org.final_project;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Pack {
 
@@ -30,6 +34,10 @@ public class Pack {
     ArrayList<String[]> soccerPlayers;
     ArrayList<String[]> basketballPlayers;
     ArrayList<String[]> footballPlayers;
+
+    ArrayList<String> soccerImageList;
+    ArrayList<String> basketballImageList;
+    ArrayList<String> footballImageList;
 
     /** random object for card drawcard methods*/
     private Random rand;
@@ -44,7 +52,7 @@ public class Pack {
         }
     }
 
-    private Pack() {
+    private Pack() throws FileNotFoundException {
         rand = new Random();
         SoccerCard soccerCard1 = new SoccerCard();
         BasketballCard basketballCard1 = new BasketballCard();
@@ -57,6 +65,41 @@ public class Pack {
         soccerPlayers = soccerCard1.getOverallListSoccer();
         basketballPlayers = basketballCard1.getOverallListBasketball();
         footballPlayers = footballCard1.getOverallListFootball();
+
+        soccerImageList = getImageURL("soccer");
+        basketballImageList = getImageURL("basketball");
+        footballImageList = getImageURL("football");
+    }
+
+    public ArrayList<String> getImageURL(String sport) throws FileNotFoundException {
+        sport.toLowerCase();
+        File soccerFile = new File("src/main/java/org/final_project/SoccerImages.txt");
+        File basketballFile = new File("src/main/java/org/final_project/BasketballImages.txt");
+        File footballFile = new File("src/main/java/org/final_project/FootballImages.txt");
+        Scanner scnr;
+        ArrayList<String> returnList = new ArrayList<>();
+        if (sport.equals("soccer")){
+            scnr = new Scanner(soccerFile);
+            while (scnr.hasNext()) {
+                String url = scnr.nextLine();
+                returnList.add(url);
+            }
+        }
+        else if (sport.equals("basketball")){
+            scnr = new Scanner(basketballFile);
+            while (scnr.hasNext()) {
+                String url = scnr.nextLine();
+                returnList.add(url);
+            }
+        }
+        else if (sport.equals("football")){
+            scnr = new Scanner(footballFile);
+            while (scnr.hasNext()) {
+                String url = scnr.nextLine();
+                returnList.add(url);
+            }
+        }
+        return returnList;
     }
 
     /**
@@ -67,18 +110,23 @@ public class Pack {
         //generate random number to select card from overall list
         int randValue = rand.nextInt(soccerPlayers.size() - 1);
         ArrayList<String[]> packCard = new ArrayList<>();
+        ArrayList<String> packImage = new ArrayList<>();
         //Fill array with one card
         if (oneCard == true) {
             packCard.add(soccerPlayers.get(randValue));
+            packImage.add(soccerImageList.get(randValue));
             return packCard;
         }
         //Fill array with three cards
         else {
             packCard.add(soccerPlayers.get(randValue));
+            packImage.add(soccerImageList.get(randValue));
             randValue = rand.nextInt(soccerPlayers.size() - 1);
             packCard.add(soccerPlayers.get(randValue));
+            packImage.add(soccerImageList.get(randValue));
             randValue = rand.nextInt(soccerPlayers.size() - 1);
             packCard.add(soccerPlayers.get(randValue));
+            packImage.add(soccerImageList.get(randValue));
             return packCard;
         }
     }
