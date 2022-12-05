@@ -30,24 +30,12 @@ public class Card {
     /** enumeration sport of the card */
     private Sport cardSport;
 
-    /** image that will cover the card */
-    public Image cardImage;
-
     /**
      * constructor for card object
      * @param cardSport selected sport for the card
      */
     public Card(Sport cardSport) {
         this.cardSport = cardSport;
-    }
-
-    /**
-     * goes through array list of players and finds the image of the player's card
-     * @return image of the player's card
-     */
-    private Image findImage() {
-        //TODO - read in data file associated with sport and find card's image
-        return null;
     }
 
     /**
@@ -65,10 +53,6 @@ public class Card {
             String[] addCard = {newCard.getFullName(), newCard.getPosition(), newCard.getOverall()};
             FootballCard.getOverallListFootball().add(addCard);
         }
-    }
-
-    public void setCardSport(Sport cardSport) {
-        this.cardSport = cardSport;
     }
 
     public Sport getCardSport() {
