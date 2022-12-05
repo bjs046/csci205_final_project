@@ -183,7 +183,7 @@ public class CardSimController {
      * Changing scenes from open a pack to football
      */
     public void packToFootball(ActionEvent event) throws IOException {
-        Parent footballParent = FXMLLoader.load(getClass().getResource("/"));
+        Parent footballParent = FXMLLoader.load(getClass().getResource("/BasketballCard.fxml"));
         Scene footballScene = new Scene(footballParent);
 
         Stage footballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
