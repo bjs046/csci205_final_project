@@ -24,10 +24,7 @@ class CardTest {
     }
 
     @Test
-    void setCardSport() {
-    }
-
-    @Test
     void getCardSport() {
+        assertEquals(testCard.getCardSport(),Sport.FOOTBALL);
     }
 }
