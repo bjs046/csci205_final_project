@@ -95,6 +95,19 @@ public class CardSimController {
     @FXML
     private ImageView soccerPfp;
 
+    @FXML
+    private AnchorPane AnchorPane;
+
+    @FXML
+    private Rectangle fbCard;
+
+    @FXML
+    private ImageView fbCardImage;
+
+    @FXML
+    private ImageView fbImage;
+
+
     public CardSimController() throws IOException {
     }
 
@@ -121,6 +134,11 @@ public class CardSimController {
         assert soccerBackground != null : "fx:id=\"soccerBackground\" was not injected: check your FXML file 'Soccer.fxml'.";
         assert soccerCard != null : "fx:id=\"soccerCard\" was not injected: check your FXML file 'Soccer.fxml'.";
         assert soccerPfp != null : "fx:id=\"soccerPfp\" was not injected: check your FXML file 'Soccer.fxml'.";
+
+        assert AnchorPane != null : "fx:id=\"AnchorPane\" was not injected: check your FXML file 'Football.fxml'.";
+        assert fbCard != null : "fx:id=\"fbCard\" was not injected: check your FXML file 'Football.fxml'.";
+        assert fbCardImage != null : "fx:id=\"fbCardImage\" was not injected: check your FXML file 'Football.fxml'.";
+        assert fbImage != null : "fx:id=\"fbImage\" was not injected: check your FXML file 'Football.fxml'.";
     }
 
 
@@ -183,7 +201,7 @@ public class CardSimController {
      * Changing scenes from open a pack to football
      */
     public void packToFootball(ActionEvent event) throws IOException {
-        Parent footballParent = FXMLLoader.load(getClass().getResource("/"));
+        Parent footballParent = FXMLLoader.load(getClass().getResource("/Football.fxml"));
         Scene footballScene = new Scene(footballParent);
 
         Stage footballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
