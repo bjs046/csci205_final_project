@@ -80,13 +80,4 @@ public class SoccerCard extends Card{
             e.printStackTrace();
         }
     }
-
-
-
-    public static void main(String[] args){
-        SoccerCard a = new SoccerCard();
-        a.fillSoccerList();
-        //a.addOverall(new CustomCard(SOCCER, "ST", "junior"));
-        //System.out.println(overallListSoccer.get(98)[1]);
-    }
 }
