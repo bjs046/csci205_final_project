@@ -28,7 +28,7 @@ import static org.final_project.Sport.BASKETBALL;
 
 public class BasketballCard extends Card{
     /** static array list of overalls for basketball cards */
-    private static ArrayList<String[]> overallListBasketball = new ArrayList<>();
+    public static ArrayList<String[]> overallListBasketball = new ArrayList<>();
 
     /** name of data file for basketball cards */
     private static final String basketballDataFile = "src/main/java/org/final_project/nba2k-full.csv";
@@ -44,6 +44,8 @@ public class BasketballCard extends Card{
         super(BASKETBALL);
 
     }
+
+
 
     public static void fillBasketballList(){
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
@@ -61,7 +63,7 @@ public class BasketballCard extends Card{
                 String[] addedValues = {playerList.get(x)[0], playerList.get(x)[4], playerList.get(x)[1]};
                 overallListBasketball.add(addedValues);
                 //TODO - delete commented code
-                //System.out.println(overallListBasketball.get(x)[0] + " " + overallListBasketball.get(x)[1] + " " + overallListBasketball.get(x)[2]);
+                System.out.println(overallListBasketball.get(x)[0] + " " + overallListBasketball.get(x)[1] + " " + overallListBasketball.get(x)[2]);
                 x++;
 
             }
@@ -71,13 +73,6 @@ public class BasketballCard extends Card{
         }
     }
 
-    /**
-     * used for adding a custom card's overall to the array list for the pack openings
-     */
-    public void addOverall(CustomCard newCard) {
-        String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
-        overallListBasketball.add(addCard);
-    }
 
     public static void main(String[] args){
         BasketballCard a = new BasketballCard();

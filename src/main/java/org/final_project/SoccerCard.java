@@ -20,8 +20,16 @@ package org.final_project;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.util.List;
 
 import static java.lang.Integer.parseInt;
 import static org.final_project.Sport.SOCCER;
@@ -31,7 +39,11 @@ public class SoccerCard extends Card{
     private static ArrayList<String[]> overallListSoccer = new ArrayList<>();
 
     /** name of data file for soccer cards */
-    private static final String soccerDataFile = "src/main/java/org/final_project/players_22.csv";
+    private static final String soccerDataFile = "src/main/java/org/final_project/soccerfile.csv";
+
+    /** name of image link file for soccer cards*/
+    private static final String soccerImageFile = "src/main/java/org/final_project/SoccerImages.txt";
+
 
     public static ArrayList<String[]> getOverallListSoccer() {
         return overallListSoccer;
@@ -44,9 +56,6 @@ public class SoccerCard extends Card{
         super(SOCCER);
     }
 
-    /**
-     * read in soccer data file and fill list with all the cards' overalls
-     */
     public static void fillSoccerList(){
         //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
         //appropriate list
@@ -60,11 +69,10 @@ public class SoccerCard extends Card{
             while (scnr.hasNext()&&x<100) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
-                //name, position, overall
                 String[] addedValues = {playerList.get(x)[2], playerList.get(x)[4], playerList.get(x)[5]};
                 overallListSoccer.add(addedValues);
                 //TODO - delete commented code
-                //System.out.println(overallListSoccer.get(x)[0] + " " + overallListSoccer.get(x)[1] + " " + overallListSoccer.get(x)[2]);
+                System.out.println(overallListSoccer.get(x)[0] + " " + overallListSoccer.get(x)[1] + " " + overallListSoccer.get(x)[2]);
                 x++;
 
             }
@@ -74,19 +82,12 @@ public class SoccerCard extends Card{
         }
     }
 
-    /**
-     * used for adding a custom card's overall to the array list for the pack openings
-     */
-    public void addOverall(CustomCard newCard) {
-        String[] addCard = {newCard.getFullName(), newCard.getPosition(), String.valueOf(newCard.getOverall())};
-        overallListSoccer.add(addCard);
-    }
 
 
     public static void main(String[] args){
         SoccerCard a = new SoccerCard();
         a.fillSoccerList();
-//        a.addOverall(new CustomCard(SOCCER));
-//        System.out.println(overallListSoccer.get(99)[1]);
+        //a.addOverall(new CustomCard(SOCCER, "ST", "junior"));
+        //System.out.println(overallListSoccer.get(98)[1]);
     }
 }
