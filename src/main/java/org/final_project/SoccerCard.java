@@ -41,9 +41,6 @@ public class SoccerCard extends Card{
     /** name of data file for soccer cards */
     private static final String soccerDataFile = "src/main/java/org/final_project/soccerfile.csv";
 
-    /** name of image link file for soccer cards*/
-    private static final String soccerImageFile = "src/main/java/org/final_project/SoccerImages.txt";
-
 
     public static ArrayList<String[]> getOverallListSoccer() {
         return overallListSoccer;
