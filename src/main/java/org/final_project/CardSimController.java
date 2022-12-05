@@ -170,7 +170,7 @@ public class CardSimController {
      * Changing scenes from open a pack to basketball
      */
     public void packToBasketball(ActionEvent event) throws IOException {
-        Parent basketballParent = FXMLLoader.load(getClass().getResource("/"));
+        Parent basketballParent = FXMLLoader.load(getClass().getResource("/BasketballCard.fxml"));
         Scene basketballScene = new Scene(basketballParent);
 
         Stage basketballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -183,7 +183,7 @@ public class CardSimController {
      * Changing scenes from open a pack to football
      */
     public void packToFootball(ActionEvent event) throws IOException {
-        Parent footballParent = FXMLLoader.load(getClass().getResource("/BasketballCard.fxml"));
+        Parent footballParent = FXMLLoader.load(getClass().getResource("/"));
         Scene footballScene = new Scene(footballParent);
 
         Stage footballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
