@@ -31,7 +31,7 @@ public class Card {
     private Sport cardSport;
 
     /**
-     * constructor for card object
+     * constructor for card object, the child classes pass their sport to this constructor
      * @param cardSport selected sport for the card
      */
     public Card(Sport cardSport) {
@@ -58,14 +58,5 @@ public class Card {
     public Sport getCardSport() {
         return cardSport;
     }
-
-    /** Method to test the class*/
-    public static void main(String[] args){
-        BasketballCard a = new BasketballCard();
-        //System.out.println(a.cardSport);
-        //a.addOverall(new CustomCard(Sport.BASKETBALL,"PG","Junior"));
-        System.out.println(a);
-    }
-    
 
 }
