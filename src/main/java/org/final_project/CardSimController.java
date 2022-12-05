@@ -1,5 +1,8 @@
 package org.final_project;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,6 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class CardSimController {
@@ -76,6 +80,17 @@ public class CardSimController {
     @FXML
     private Slider volume;
 
+    @FXML
+    private ImageView soccerBackground;
+
+    @FXML
+    private Rectangle soccerCard;
+
+    @FXML
+    private ImageView soccerPfp;
+
+    public CardSimController() throws IOException {
+    }
 
 
     @FXML
@@ -172,13 +187,35 @@ public class CardSimController {
      * Changing scenes from open a pack to soccer
      */
     public void packToSoccer(ActionEvent event) throws IOException {
-        Parent soccerParent = FXMLLoader.load(getClass().getResource("/"));
+        Parent soccerParent = FXMLLoader.load(getClass().getResource("/Soccer.fxml"));
         Scene soccerScene = new Scene(soccerParent);
 
         Stage soccerWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         soccerWindow.setScene(soccerScene);
         soccerWindow.show();
+
+        public void initialize(URL url, ResourceBundle rb) {
+            // Running pack for soccer
+            Pack testPack = new Pack();
+            ArrayList<String[]> cardDrawn = testPack.drawSoccerCard(true);
+            String soccerCardName = cardDrawn.get(0)[0];
+            String soccerCardPosition = cardDrawn.get(0)[1];
+            String soccerCardOverall = cardDrawn.get(0)[2];
+            String soccerCardImage = testPack.URLLink.get(0);
+
+        try (InputStream in = new URL(soccerCardImage).openStream()) {
+            Files.copy(in, Paths.get("/playerpfp.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
+
+
+
+
+
+
 }
 
