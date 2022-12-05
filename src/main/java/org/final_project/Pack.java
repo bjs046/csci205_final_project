@@ -20,6 +20,7 @@ package org.final_project;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
@@ -39,12 +40,18 @@ public class Pack {
     ArrayList<String> basketballImageList;
     ArrayList<String> footballImageList;
 
+    ArrayList<String> URLLink;
+
     /** random object for card drawcard methods*/
     private Random rand;
 
     public static Pack getinstance(){
         if (instance == null) {
-            instance = new Pack();
+            try {
+                instance = new Pack();
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            }
             return instance;
         }
         else {
@@ -115,6 +122,7 @@ public class Pack {
         if (oneCard == true) {
             packCard.add(soccerPlayers.get(randValue));
             packImage.add(soccerImageList.get(randValue));
+            URLLink = packImage;
             return packCard;
         }
         //Fill array with three cards
@@ -127,6 +135,7 @@ public class Pack {
             randValue = rand.nextInt(soccerPlayers.size() - 1);
             packCard.add(soccerPlayers.get(randValue));
             packImage.add(soccerImageList.get(randValue));
+            URLLink = packImage;
             return packCard;
         }
     }
@@ -139,18 +148,25 @@ public class Pack {
         //generate random number to select card from overall list
         int randValue = rand.nextInt(footballPlayers.size() - 1);
         ArrayList<String[]> packCard = new ArrayList<>();
+        ArrayList<String> packImage = new ArrayList<>();
         //Fill array with one card
         if (oneCard == true) {
             packCard.add(footballPlayers.get(randValue));
+            packImage.add(footballImageList.get(randValue));
+            URLLink = packImage;
             return packCard;
         }
         //Fill array with three cards
         else {
             packCard.add(footballPlayers.get(randValue));
+            packImage.add(footballImageList.get(randValue));
             randValue = rand.nextInt(footballPlayers.size() - 1);
             packCard.add(footballPlayers.get(randValue));
+            packImage.add(footballImageList.get(randValue));
             randValue = rand.nextInt(footballPlayers.size() - 1);
             packCard.add(footballPlayers.get(randValue));
+            packImage.add(footballImageList.get(randValue));
+            URLLink = packImage;
             return packCard;
         }
     }
@@ -179,7 +195,11 @@ public class Pack {
         }
     }
 
-    public static void main(String[] args){
-        System.out.println(getinstance().drawBasketballCard(true).get(0)[0]);
+    public static void main(String[] args) throws IOException{
+        Pack testPack = new Pack();
+        System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
+        System.out.println(testPack.URLLink.get(0));
+        System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
+        System.out.println(testPack.URLLink.get(0));
     }
 }

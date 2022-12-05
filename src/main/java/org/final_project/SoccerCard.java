@@ -72,7 +72,7 @@ public class SoccerCard extends Card{
                 String[] addedValues = {playerList.get(x)[2], playerList.get(x)[4], playerList.get(x)[5]};
                 overallListSoccer.add(addedValues);
                 //TODO - delete commented code
-                System.out.println(overallListSoccer.get(x)[0] + " " + overallListSoccer.get(x)[1] + " " + overallListSoccer.get(x)[2]);
+                //System.out.println(overallListSoccer.get(x)[0] + " " + overallListSoccer.get(x)[1] + " " + overallListSoccer.get(x)[2]);
                 x++;
 
             }
