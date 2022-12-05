@@ -29,7 +29,7 @@ import java.util.Scanner;
 public class Pack {
 
     /** instance of pack so we can use a singleton design patter */
-    private static Pack instance;
+    public static Pack instance;
 
     // TODO - do we need to make copies of the player lists
     ArrayList<String[]> soccerPlayers;
@@ -43,7 +43,7 @@ public class Pack {
     ArrayList<String> URLLink;
 
     /** random object for card drawcard methods*/
-    private Random rand;
+    public Random rand;
 
     public static Pack getinstance(){
         if (instance == null) {
@@ -59,7 +59,7 @@ public class Pack {
         }
     }
 
-    private Pack() throws FileNotFoundException {
+    public Pack() throws FileNotFoundException {
         rand = new Random();
         SoccerCard soccerCard1 = new SoccerCard();
         BasketballCard basketballCard1 = new BasketballCard();

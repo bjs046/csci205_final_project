@@ -91,6 +91,7 @@ public class Card {
         return cardSport;
     }
 
+    /** Method to test the class*/
     public static void main(String[] args){
         BasketballCard a = new BasketballCard();
         //System.out.println(a.cardSport);

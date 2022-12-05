@@ -4,7 +4,11 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +24,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import java.net.URL;
+import javafx.scene.shape.Rectangle;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -94,7 +100,7 @@ public class CardSimController {
 
 
     @FXML
-    void initialize() {
+    public void initialize() throws IOException{
         assert mainTitle != null : "fx:id=\"mainTitle\" was not injected: check your FXML file 'CardSim.fxml'.";
         assert optionsButton != null : "fx:id=\"optionsButton\" was not injected: check your FXML file 'CardSim.fxml'.";
         assert startAnchorPane != null : "fx:id=\"startAnchorPane\" was not injected: check your FXML file 'CardSim.fxml'.";
@@ -112,6 +118,9 @@ public class CardSimController {
         assert backGround != null : "fx:id=\"backGround\" was not injected: check your FXML file 'Options.fxml'.";
         assert checkBox != null : "fx:id=\"checkBox\" was not injected: check your FXML file 'Options.fxml'.";
         assert volume != null : "fx:id=\"volume\" was not injected: check your FXML file 'Options.fxml'.";
+        assert soccerBackground != null : "fx:id=\"soccerBackground\" was not injected: check your FXML file 'Soccer.fxml'.";
+        assert soccerCard != null : "fx:id=\"soccerCard\" was not injected: check your FXML file 'Soccer.fxml'.";
+        assert soccerPfp != null : "fx:id=\"soccerPfp\" was not injected: check your FXML file 'Soccer.fxml'.";
     }
 
 
