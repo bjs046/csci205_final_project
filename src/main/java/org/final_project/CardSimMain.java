@@ -17,13 +17,10 @@ public class CardSimMain extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         //Loads the FXMLfile. Obtain the root of the scene graph
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/CardSim.fxml"));
-        Parent root = loader.load();
-
-        // Set up the stage and show it
-        primaryStage.setTitle("Card Sim");
-        primaryStage.setScene(new Scene(root));
+        Parent root = FXMLLoader.load(getClass().getResource("/CardSim.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
         primaryStage.show();
+
     }
 }
