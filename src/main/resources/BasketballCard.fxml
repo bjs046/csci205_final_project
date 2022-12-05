@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.final_project.CardSimController">
    <children>
       <ImageView fx:id="bballCourt" fitHeight="400.0" fitWidth="612.0" layoutX="-6.0">
@@ -13,7 +12,10 @@
             <Image url="@basketballcourt.jpeg" />
          </image>
       </ImageView>
-      <Rectangle fx:id="bballCard" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="250.0" layoutX="225.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
-      <ImageView fx:id="bballCardImage" fitHeight="103.0" fitWidth="124.0" layoutX="238.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle fx:id="bballCard" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="250.0" layoutX="225.0" layoutY="88.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <ImageView fx:id="bballCardImage" fitHeight="102.0" fitWidth="131.0" layoutX="249.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@playerpfp.jpg" />
+         </image></ImageView>
    </children>
 </AnchorPane>

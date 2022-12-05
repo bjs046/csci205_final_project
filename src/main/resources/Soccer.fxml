@@ -14,6 +14,10 @@
          </image>
       </ImageView>
       <Rectangle fx:id="soccerCard" arcHeight="5.0" arcWidth="5.0" fill="#efdd19" height="250.0" layoutX="225.0" layoutY="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="150.0" />
-      <ImageView fx:id="soccerPfp" fitHeight="102.0" fitWidth="131.0" layoutX="234.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="soccerPfp" fitHeight="102.0" fitWidth="131.0" layoutX="249.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@playerpfp.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
