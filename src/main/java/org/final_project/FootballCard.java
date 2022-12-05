@@ -78,6 +78,6 @@ public class FootballCard extends Card{
         FootballCard a = new FootballCard();
         fillFootballList();
        // a.addOverall(new CustomCard(FOOTBALL));
-        System.out.println(overallListFootball.get(98)[0]);
+        //System.out.println(overallListFootball.get(98)[0]);
     }
 }
