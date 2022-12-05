@@ -21,20 +21,26 @@ package org.final_project;
 public class CustomCard extends Card{
 
     /** player's full name */
-    String fullName;
+    private String fullName;
 
     /** player's position */
-    String position;
+    private String position;
+
+    /** player's overall */
+    private String overall;
 
     /**
-     * constructor for card object
-     *
-     * @param cardSport selected sport for the card
+     * constructor for card object.
+     * @param cardSport passes the sport of the card to the super constructor
+     * @param pos position of the custom player card
+     * @param name name of the custom card
+     * @param overall overall of the custom card
      */
-    public CustomCard(Sport cardSport, String pos, String name) {
+    public CustomCard(Sport cardSport, String pos, String name, String overall) {
         super(cardSport);
         this.position = pos;
         this.fullName = name;
+        this.overall = overall;
     }
 
     public String getFullName() {
@@ -43,5 +49,9 @@ public class CustomCard extends Card{
 
     public String getPosition() {
         return position;
+    }
+
+    public String getOverall() {
+        return overall;
     }
 }

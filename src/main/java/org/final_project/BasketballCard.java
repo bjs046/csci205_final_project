@@ -45,11 +45,13 @@ public class BasketballCard extends Card{
 
     }
 
-
-
-    public static void fillBasketballList(){
-        //TODO - buffered reader and split the list with comma delimiter and add all the overalls to the
-        //appropriate list
+    /**
+     * read in soccer data file from pathway and fills array list with all the cards' overalls.  It splits
+     * the line in the data file into an array then we access the indices with the information we need to then
+     * copy over into the array list with all the other players
+     */
+    public static void fillBasketballList() {
+        //appropriate data file
         File file = new File(basketballDataFile);
         ArrayList<String[]> playerList = new ArrayList<>();
         try {
@@ -57,27 +59,16 @@ public class BasketballCard extends Card{
             // Getting rid of the first line (which is the legend)
             scnr.nextLine();
             int x = 0;
-            while (scnr.hasNext()&&x<100) {
+            while (scnr.hasNext() && x < 100) {
                 String wholeLine = scnr.nextLine();
                 playerList.add(wholeLine.split(","));
                 String[] addedValues = {playerList.get(x)[0], playerList.get(x)[4], playerList.get(x)[1]};
                 overallListBasketball.add(addedValues);
-                //TODO - delete commented code
-                //System.out.println(overallListBasketball.get(x)[0] + " " + overallListBasketball.get(x)[1] + " " + overallListBasketball.get(x)[2]);
                 x++;
 
             }
-        }
-        catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-
-    public static void main(String[] args){
-        BasketballCard a = new BasketballCard();
-        a.fillBasketballList();
-//        a.addOverall(new CustomCard(BASKETBALL, "PG", "Junior"));
-//        System.out.println(overallListBasketball.get(99)[0] + " " + overallListBasketball.get(99)[1] + " " + overallListBasketball.get(99)[2]);
     }
 }

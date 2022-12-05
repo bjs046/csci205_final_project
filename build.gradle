@@ -45,7 +45,7 @@ dependencies {
 
 application {
     mainModule = "csci205_final_project"
-    mainClassName = "org.final_project.Main"
+    mainClassName = "org.final_project.CardSimMain"
 
     if (project.hasProperty("mainClass")) {
         getMainClass().set(project.getProperty("mainClass"))
