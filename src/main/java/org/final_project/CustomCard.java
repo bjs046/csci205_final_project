@@ -30,9 +30,11 @@ public class CustomCard extends Card{
     private String overall;
 
     /**
-     * constructor for card object
-     *
-     * @param cardSport selected sport for the card
+     * constructor for card object.
+     * @param cardSport passes the sport of the card to the super constructor
+     * @param pos position of the custom player card
+     * @param name name of the custom card
+     * @param overall overall of the custom card
      */
     public CustomCard(Sport cardSport, String pos, String name, String overall) {
         super(cardSport);
