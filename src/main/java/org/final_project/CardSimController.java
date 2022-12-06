@@ -235,6 +235,10 @@ public class CardSimController {
 
         window2.setScene(packScreenScene);
         window2.show();
+
+
+
+
     }
 
     @FXML
@@ -297,26 +301,28 @@ public class CardSimController {
         basketballWindow.setScene(basketballScene);
         basketballWindow.show();
 
+        //Basketball
         Pack testPack1 = new Pack();
-        ArrayList<String[]> cardDrawn = testPack1.drawBasketballCard(true);
-        String basketballCardName = cardDrawn.get(0)[0];
-        String basketballCardPosition = cardDrawn.get(0)[1];
-        String basketballCardOverall = cardDrawn.get(0)[2];
+        ArrayList<String[]> cardDrawn1 = testPack1.drawBasketballCard(true);
+        String basketballCardName = cardDrawn1.get(0)[0];
+        String basketballCardPosition = cardDrawn1.get(0)[1];
+        String basketballCardOverall = cardDrawn1.get(0)[2];
         String basketballCardImage = testPack1.URLLink.get(0);
 
         URL basketballURL= new URL(basketballCardImage);
-        InputStream is = basketballURL.openStream();
-        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
+        InputStream is1 = basketballURL.openStream();
+        FileOutputStream fo1 = new FileOutputStream("src/main/resources/basketballpfp.jpg");
         int x = 0;
-        while ((x = is.read())!=-1) {
-            fo.write(x);
+        while ((x = is1.read())!=-1) {
+            fo1.write(x);
         }
-        fo.close();
-        is.close();
+        fo1.close();
+        is1.close();
 
         basketballName.setText(basketballCardName);
         basketballPosition.setText(basketballCardPosition);
         basketballOverall.setText(basketballCardOverall);
+
     }
 
     @FXML
@@ -332,21 +338,22 @@ public class CardSimController {
         footballWindow.setScene(footballScene);
         footballWindow.show();
 
+        //Football
         Pack testPack2 = new Pack();
-        ArrayList<String[]> cardDrawn = testPack2.drawFootballCard(true);
-        String footballCardName = cardDrawn.get(0)[0];
-        String footballCardPosition = cardDrawn.get(0)[1];
-        String footballCardOverall = cardDrawn.get(0)[2];
+        ArrayList<String[]> cardDrawn2 = testPack2.drawFootballCard(true);
+        String footballCardName = cardDrawn2.get(0)[0];
+        String footballCardPosition = cardDrawn2.get(0)[1];
+        String footballCardOverall = cardDrawn2.get(0)[2];
         String footballCardImage = testPack2.URLLink.get(0);
         URL footballURL= new URL(footballCardImage);
-        InputStream is = footballURL.openStream();
-        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
-        int x = 0;
-        while ((x = is.read())!=-1) {
-            fo.write(x);
+        InputStream is2 = footballURL.openStream();
+        FileOutputStream fo2 = new FileOutputStream("src/main/resources/footballpfp.jpg");
+        int y = 0;
+        while ((y = is2.read())!=-1) {
+            fo2.write(y);
         }
-        fo.close();
-        is.close();
+        fo2.close();
+        is2.close();
     }
 
     @FXML
@@ -363,24 +370,25 @@ public class CardSimController {
         soccerWindow.setScene(soccerScene);
         soccerWindow.show();
 
-
+        //Soccer
         Pack testPack3 = new Pack();
-        ArrayList<String[]> cardDrawn = testPack3.drawSoccerCard(true);
-        String soccerCardName = cardDrawn.get(0)[0];
-        String soccerCardPosition = cardDrawn.get(0)[1];
-        String soccerCardOverall = cardDrawn.get(0)[2];
+        ArrayList<String[]> cardDrawn3 = testPack3.drawSoccerCard(true);
+        String soccerCardName = cardDrawn3.get(0)[0];
+        String soccerCardPosition = cardDrawn3.get(0)[1];
+        String soccerCardOverall = cardDrawn3.get(0)[2];
         String soccerCardImage = testPack3.URLLink.get(0);
 
         URL soccerURL= new URL(soccerCardImage);
-        InputStream is = soccerURL.openStream();
+        InputStream is3 = soccerURL.openStream();
 
-        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
-        int x = 0;
-        while ((x = is.read())!=-1) {
-            fo.write(x);
+        FileOutputStream fo3 = new FileOutputStream("src/main/resources/soccerpfp.jpg");
+        int z = 0;
+        while ((z = is3.read())!=-1) {
+            fo3.write(z);
         }
-        fo.close();
-        is.close();
+        fo3.close();
+        is3.close();
+
     }
 }
 
