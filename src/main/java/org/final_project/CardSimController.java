@@ -213,7 +213,6 @@ public class CardSimController {
 
         URL basketballURL= new URL(basketballCardImage);
         InputStream is = basketballURL.openStream();
-
         FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
         int x = 0;
         while ((x = is.read())!=-1) {
@@ -255,6 +254,7 @@ public class CardSimController {
         String soccerCardOverall = cardDrawn.get(0)[2];
         String soccerCardImage = testPack.URLLink.get(0);
 
+        System.out.println(soccerCardImage);
         URL soccerURL= new URL(soccerCardImage);
         InputStream is = soccerURL.openStream();
 
