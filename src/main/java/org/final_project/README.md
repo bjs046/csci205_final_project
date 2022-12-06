@@ -15,4 +15,4 @@ and money of having to go to the store and actually purchase a card pack, instea
 create their own custom cards.
     Our package folder contains our classes for our cards and JavaFX.  The card class is the parent class which 
 contains the enumeration for the sport of the card.  From this parent class are the child classes.  The custom card 
-inherits from the card class 
+inherits from the card class. Along with the custom card class the soccer card, football card, 
