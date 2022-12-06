@@ -16,7 +16,7 @@
       <Rectangle fx:id="fbCard" arcHeight="5.0" arcWidth="5.0" fill="#0bbc14" height="250.0" layoutX="231.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
       <ImageView fx:id="fbImage" fitHeight="102.0" fitWidth="131.0" layoutX="255.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@sportpfp.jpg" />
+            <Image url="@playerpfp.jpg" />
          </image></ImageView>
       <Text fx:id="footballName" layoutX="289.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
       <Text fx:id="footballPosition" layoutX="284.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position" />

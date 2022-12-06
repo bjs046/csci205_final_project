@@ -148,6 +148,18 @@ public class CardSimController {
     @FXML
     private Text footballPosition;
 
+    @FXML
+    private ImageView basketballLoadingBackground;
+
+    @FXML
+    private Text basketballLoadingQuestion;
+
+    @FXML
+    private Button basketballNo;
+
+    @FXML
+    private Button basketballYes;
+
 
     public CardSimController() throws IOException {
     }
@@ -189,6 +201,10 @@ public class CardSimController {
         assert footballName != null : "fx:id=\"footballName\" was not injected: check your FXML file 'Football.fxml'.";
         assert footballOverall != null : "fx:id=\"footballOverall\" was not injected: check your FXML file 'Football.fxml'.";
         assert footballPosition != null : "fx:id=\"footballPosition\" was not injected: check your FXML file 'Football.fxml'.";
+        assert basketballLoadingBackground != null : "fx:id=\"basketballLoadingBackground\" was not injected: check your FXML file 'BasketballLoading.fxml'.";
+        assert basketballLoadingQuestion != null : "fx:id=\"basketballLoadingQuestion\" was not injected: check your FXML file 'BasketballLoading.fxml'.";
+        assert basketballNo != null : "fx:id=\"basketballNo\" was not injected: check your FXML file 'BasketballLoading.fxml'.";
+        assert basketballYes != null : "fx:id=\"basketballYes\" was not injected: check your FXML file 'BasketballLoading.fxml'.";
     }
 
 
@@ -221,6 +237,7 @@ public class CardSimController {
         window2.show();
     }
 
+    @FXML
     /**
      * Changing scenes from options to options window
      */
@@ -235,19 +252,38 @@ public class CardSimController {
     }
 
 
+
     /**
-     *
+     * Code
      */
-    public void packToBasketballLoading(ActionEvent event) throws IOException {
-        // Storing information about basketball
-        Parent basketballLoadingParent = FXMLLoader.load(getClass().getResource("/BasketballLoading.fxml"));
-        Scene basketballLoadingScene = new Scene(basketballLoadingParent);
-
-        Stage basketballLoadingWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        basketballLoadingWindow.setScene(basketballLoadingScene);
-        basketballLoadingWindow.show();
-    }
+//    public void packToBasketballLoading(ActionEvent event) throws IOException {
+//        // Storing information about basketball
+//        Parent basketballLoadingParent = FXMLLoader.load(getClass().getResource("/BasketballLoading.fxml"));
+//        Scene basketballLoadingScene = new Scene(basketballLoadingParent);
+//
+//        Stage basketballLoadingWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//
+//        basketballLoadingWindow.setScene(basketballLoadingScene);
+//        basketballLoadingWindow.show();
+//
+//        Pack testPack1 = new Pack();
+//        ArrayList<String[]> cardDrawn = testPack1.drawBasketballCard(true);
+//        String basketballCardName = cardDrawn.get(0)[0];
+//        String basketballCardPosition = cardDrawn.get(0)[1];
+//        String basketballCardOverall = cardDrawn.get(0)[2];
+//        String basketballCardImage = testPack1.URLLink.get(0);
+//
+//        URL basketballURL= new URL(basketballCardImage);
+//        InputStream is = basketballURL.openStream();
+//        FileOutputStream fo = new FileOutputStream("src/main/resources/sportpfp.jpg");
+//        int x = 0;
+//        while ((x = is.read())!=-1) {
+//            fo.write(x);
+//        }
+//        fo.close();
+//        is.close();
+//    }
+    @FXML
     /**
      * Changing scenes from open a pack to basketball
      */
@@ -270,7 +306,7 @@ public class CardSimController {
 
         URL basketballURL= new URL(basketballCardImage);
         InputStream is = basketballURL.openStream();
-        FileOutputStream fo = new FileOutputStream("src/main/resources/sportpfp.jpg");
+        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
         int x = 0;
         while ((x = is.read())!=-1) {
             fo.write(x);
@@ -283,6 +319,7 @@ public class CardSimController {
         basketballOverall.setText(basketballCardOverall);
     }
 
+    @FXML
     /**
      * Changing scenes from open a pack to football
      */
@@ -303,7 +340,7 @@ public class CardSimController {
         String footballCardImage = testPack2.URLLink.get(0);
         URL footballURL= new URL(footballCardImage);
         InputStream is = footballURL.openStream();
-        FileOutputStream fo = new FileOutputStream("src/main/resources/sportpfp.jpg");
+        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
         int x = 0;
         while ((x = is.read())!=-1) {
             fo.write(x);
@@ -312,6 +349,7 @@ public class CardSimController {
         is.close();
     }
 
+    @FXML
     /**
      * Changing scenes from soccer loading screen to soccer pack screen
      */
@@ -336,27 +374,13 @@ public class CardSimController {
         URL soccerURL= new URL(soccerCardImage);
         InputStream is = soccerURL.openStream();
 
-        FileOutputStream fo = new FileOutputStream("src/main/resources/sportpfp.jpg");
+        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
         int x = 0;
         while ((x = is.read())!=-1) {
             fo.write(x);
         }
         fo.close();
         is.close();
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
 }
 

@@ -16,7 +16,7 @@
       <Rectangle fx:id="soccerCard" arcHeight="5.0" arcWidth="5.0" fill="#efdd19" height="250.0" layoutX="225.0" layoutY="75.0" stroke="TRANSPARENT" strokeType="INSIDE" width="150.0" />
       <ImageView fx:id="soccerPfp" fitHeight="102.0" fitWidth="131.0" layoutX="249.0" layoutY="98.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@sportpfp.jpg" />
+            <Image url="@playerpfp.jpg" />
          </image>
       </ImageView>
       <Text fx:id="soccerName" layoutX="284.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
