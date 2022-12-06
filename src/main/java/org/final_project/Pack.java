@@ -58,6 +58,13 @@ public class Pack {
         }
     }
 
+    /**
+     * Pack object constructor.  creates a new random object that is used in the random card generator methods
+     * then creates new sports card objects for all three sports so that we can fill the lists.  Then we clone the
+     * the lists and generate then image lists for all three sports
+     *
+     * @throws FileNotFoundException
+     */
     public Pack() throws FileNotFoundException {
         rand = new Random();
         SoccerCard soccerCard1 = new SoccerCard();
