@@ -31,7 +31,6 @@ public class Pack {
     /** instance of pack so we can use a singleton design patter */
     public static Pack instance;
 
-    // TODO - do we need to make copies of the player lists
     ArrayList<String[]> soccerPlayers;
     ArrayList<String[]> basketballPlayers;
     ArrayList<String[]> footballPlayers;
