@@ -31,7 +31,6 @@ public class Pack {
     /** instance of pack so we can use a singleton design patter */
     public static Pack instance;
 
-    // TODO - do we need to make copies of the player lists
     ArrayList<String[]> soccerPlayers;
     ArrayList<String[]> basketballPlayers;
     ArrayList<String[]> footballPlayers;
@@ -203,10 +202,20 @@ public class Pack {
     }
 
     public static void main(String[] args) throws IOException{
+        /**
+        Pack testPack = new Pack();
+        System.out.println(testPack.drawFootballCard(true).get(0)[0]);
+        System.out.println(testPack.URLLink.get(0));
+        System.out.println(testPack.drawFootballCard(true).get(0)[0]);
+        System.out.println(testPack.URLLink.get(0));
+         */
+
+
         Pack testPack = new Pack();
         System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
         System.out.println(testPack.URLLink.get(0));
         System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
         System.out.println(testPack.URLLink.get(0));
+
     }
 }
