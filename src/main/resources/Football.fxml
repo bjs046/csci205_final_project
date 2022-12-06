@@ -4,7 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
-
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.final_project.CardSimController">
    <children>
@@ -14,6 +14,12 @@
          </image>
       </ImageView>
       <Rectangle fx:id="fbCard" arcHeight="5.0" arcWidth="5.0" fill="#0bbc14" height="250.0" layoutX="231.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
-      <ImageView fx:id="fbImage" fitHeight="102.0" fitWidth="131.0" layoutX="249.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="fbImage" fitHeight="102.0" fitWidth="131.0" layoutX="255.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sportpfp.jpg" />
+         </image></ImageView>
+      <Text fx:id="footballName" layoutX="289.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text fx:id="footballPosition" layoutX="284.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position" />
+      <Text fx:id="footballOverall" layoutX="287.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall" />
    </children>
 </AnchorPane>

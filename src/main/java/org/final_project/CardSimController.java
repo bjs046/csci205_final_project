@@ -107,6 +107,15 @@ public class CardSimController {
     private ImageView soccerPfp;
 
     @FXML
+    private Text soccerName;
+
+    @FXML
+    private Text soccerOverall;
+
+    @FXML
+    private Text soccerPosition;
+
+    @FXML
     private ImageView soccerBlurred;
 
     @FXML
@@ -120,6 +129,25 @@ public class CardSimController {
 
     @FXML
     private ImageView bballCourt;
+
+    @FXML
+    private Label basketballName;
+
+    @FXML
+    private Label basketballOverall;
+
+    @FXML
+    private Label basketballPosition;
+
+    @FXML
+    private Text footballName;
+
+    @FXML
+    private Text footballOverall;
+
+    @FXML
+    private Text footballPosition;
+
 
     public CardSimController() throws IOException {
     }
@@ -152,6 +180,15 @@ public class CardSimController {
         assert bballCard != null : "fx:id=\"bballCard\" was not injected: check your FXML file 'BasketballCard.fxml'.";
         assert bballCardImage != null : "fx:id=\"bballCardImage\" was not injected: check your FXML file 'BasketballCard.fxml'.";
         assert bballCourt != null : "fx:id=\"bballCourt\" was not injected: check your FXML file 'BasketballCard.fxml'.";
+        assert basketballName != null : "fx:id=\"basketballName\" was not injected: check your FXML file 'BasketballCard.fxml'.";
+        assert basketballOverall != null : "fx:id=\"basketballOverall\" was not injected: check your FXML file 'BasketballCard.fxml'.";
+        assert basketballPosition != null : "fx:id=\"basketballPosition\" was not injected: check your FXML file 'BasketballCard.fxml'.";
+        assert soccerName != null : "fx:id=\"soccerName\" was not injected: check your FXML file 'Soccer.fxml'.";
+        assert soccerOverall != null : "fx:id=\"soccerOverall\" was not injected: check your FXML file 'Soccer.fxml'.";
+        assert soccerPosition != null : "fx:id=\"soccerPosition\" was not injected: check your FXML file 'Soccer.fxml'.";
+        assert footballName != null : "fx:id=\"footballName\" was not injected: check your FXML file 'Football.fxml'.";
+        assert footballOverall != null : "fx:id=\"footballOverall\" was not injected: check your FXML file 'Football.fxml'.";
+        assert footballPosition != null : "fx:id=\"footballPosition\" was not injected: check your FXML file 'Football.fxml'.";
     }
 
 
@@ -199,27 +236,23 @@ public class CardSimController {
 
 
     /**
+     *
+     */
+    public void packToBasketballLoading(ActionEvent event) throws IOException {
+        // Storing information about basketball
+        Parent basketballLoadingParent = FXMLLoader.load(getClass().getResource("/BasketballLoading.fxml"));
+        Scene basketballLoadingScene = new Scene(basketballLoadingParent);
+
+        Stage basketballLoadingWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        basketballLoadingWindow.setScene(basketballLoadingScene);
+        basketballLoadingWindow.show();
+    }
+    /**
      * Changing scenes from open a pack to basketball
      */
     public void packToBasketball(ActionEvent event) throws IOException {
         // Storing information about basketball
-        Pack testPack = new Pack();
-        ArrayList<String[]> cardDrawn = testPack.drawBasketballCard(true);
-        String basketballCardName = cardDrawn.get(0)[0];
-        String basketballCardPosition = cardDrawn.get(0)[1];
-        String basketballCardOverall = cardDrawn.get(0)[2];
-        String basketballCardImage = testPack.URLLink.get(0);
-        System.out.println(basketballCardImage);
-
-        URL basketballURL= new URL(basketballCardImage);
-        InputStream is = basketballURL.openStream();
-        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
-        int x = 0;
-        while ((x = is.read())!=-1) {
-            fo.write(x);
-        }
-        fo.close();
-        is.close();
         Parent basketballParent = FXMLLoader.load(getClass().getResource("/BasketballCard.fxml"));
         Scene basketballScene = new Scene(basketballParent);
 
@@ -227,38 +260,17 @@ public class CardSimController {
 
         basketballWindow.setScene(basketballScene);
         basketballWindow.show();
-    }
 
-    /**
-     * Changing scenes from open a pack to football
-     */
-    public void packToFootball(ActionEvent event) throws IOException {
-        Parent footballParent = FXMLLoader.load(getClass().getResource("/"));
-        Scene footballScene = new Scene(footballParent);
+        Pack testPack1 = new Pack();
+        ArrayList<String[]> cardDrawn = testPack1.drawBasketballCard(true);
+        String basketballCardName = cardDrawn.get(0)[0];
+        String basketballCardPosition = cardDrawn.get(0)[1];
+        String basketballCardOverall = cardDrawn.get(0)[2];
+        String basketballCardImage = testPack1.URLLink.get(0);
 
-        Stage footballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        footballWindow.setScene(footballScene);
-        footballWindow.show();
-    }
-
-    /**
-     * Changing scenes from soccer loading screen to soccer pack screen
-     */
-    public void packToSoccer(ActionEvent event) throws IOException {
-        // Storing information about soccer
-        Pack testPack = new Pack();
-        ArrayList<String[]> cardDrawn = testPack.drawSoccerCard(true);
-        String soccerCardName = cardDrawn.get(0)[0];
-        String soccerCardPosition = cardDrawn.get(0)[1];
-        String soccerCardOverall = cardDrawn.get(0)[2];
-        String soccerCardImage = testPack.URLLink.get(0);
-
-        System.out.println(soccerCardImage);
-        URL soccerURL= new URL(soccerCardImage);
-        InputStream is = soccerURL.openStream();
-
-        FileOutputStream fo = new FileOutputStream("src/main/resources/playerpfp.jpg");
+        URL basketballURL= new URL(basketballCardImage);
+        InputStream is = basketballURL.openStream();
+        FileOutputStream fo = new FileOutputStream("src/main/resources/sportpfp.jpg");
         int x = 0;
         while ((x = is.read())!=-1) {
             fo.write(x);
@@ -266,6 +278,45 @@ public class CardSimController {
         fo.close();
         is.close();
 
+        basketballName.setText(basketballCardName);
+        basketballPosition.setText(basketballCardPosition);
+        basketballOverall.setText(basketballCardOverall);
+    }
+
+    /**
+     * Changing scenes from open a pack to football
+     */
+    public void packToFootball(ActionEvent event) throws IOException {
+        Parent footballParent = FXMLLoader.load(getClass().getResource("/Football.fxml"));
+        Scene footballScene = new Scene(footballParent);
+
+        Stage footballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        footballWindow.setScene(footballScene);
+        footballWindow.show();
+
+        Pack testPack2 = new Pack();
+        ArrayList<String[]> cardDrawn = testPack2.drawFootballCard(true);
+        String footballCardName = cardDrawn.get(0)[0];
+        String footballCardPosition = cardDrawn.get(0)[1];
+        String footballCardOverall = cardDrawn.get(0)[2];
+        String footballCardImage = testPack2.URLLink.get(0);
+        URL footballURL= new URL(footballCardImage);
+        InputStream is = footballURL.openStream();
+        FileOutputStream fo = new FileOutputStream("src/main/resources/sportpfp.jpg");
+        int x = 0;
+        while ((x = is.read())!=-1) {
+            fo.write(x);
+        }
+        fo.close();
+        is.close();
+    }
+
+    /**
+     * Changing scenes from soccer loading screen to soccer pack screen
+     */
+    public void packToSoccer(ActionEvent event) throws IOException {
+        // Storing information about soccer
         Parent soccerParent = FXMLLoader.load(getClass().getResource("/Soccer.fxml"));
         Scene soccerScene = new Scene(soccerParent);
 
@@ -273,6 +324,31 @@ public class CardSimController {
 
         soccerWindow.setScene(soccerScene);
         soccerWindow.show();
+
+
+        Pack testPack3 = new Pack();
+        ArrayList<String[]> cardDrawn = testPack3.drawSoccerCard(true);
+        String soccerCardName = cardDrawn.get(0)[0];
+        String soccerCardPosition = cardDrawn.get(0)[1];
+        String soccerCardOverall = cardDrawn.get(0)[2];
+        String soccerCardImage = testPack3.URLLink.get(0);
+
+        URL soccerURL= new URL(soccerCardImage);
+        InputStream is = soccerURL.openStream();
+
+        FileOutputStream fo = new FileOutputStream("src/main/resources/sportpfp.jpg");
+        int x = 0;
+        while ((x = is.read())!=-1) {
+            fo.write(x);
+        }
+        fo.close();
+        is.close();
+
+
+
+
+
+
     }
 
 
