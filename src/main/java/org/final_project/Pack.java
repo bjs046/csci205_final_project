@@ -178,18 +178,25 @@ public class Pack {
         //generate random number to select card from overall list
         int randValue = rand.nextInt(basketballPlayers.size() - 1);
         ArrayList<String[]> packCard = new ArrayList<>();
+        ArrayList<String> packImage = new ArrayList<>();
         //Fill array with one card
         if (oneCard == true) {
             packCard.add(basketballPlayers.get(randValue));
+            packImage.add(basketballImageList.get(randValue));
+            URLLink = packImage;
             return packCard;
         }
         //Fill array with three cards
         else {
             packCard.add(basketballPlayers.get(randValue));
+            packImage.add(basketballImageList.get(randValue));
             randValue = rand.nextInt(basketballPlayers.size() - 1);
             packCard.add(basketballPlayers.get(randValue));
+            packImage.add(basketballImageList.get(randValue));
             randValue = rand.nextInt(basketballPlayers.size() - 1);
             packCard.add(basketballPlayers.get(randValue));
+            packImage.add(basketballImageList.get(randValue));
+            URLLink = packImage;
             return packCard;
         }
     }
