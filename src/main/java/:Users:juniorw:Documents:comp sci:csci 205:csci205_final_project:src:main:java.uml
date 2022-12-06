@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/juniorw/Documents/comp sci/csci 205/csci205_final_project/src/main/java</OriginalElement>
+  <nodes>
+    <node x="269.07068756410916" y="342.4151498525022">org.final_project.Pack</node>
+    <node x="87.726300405296" y="161.95692875242662">org.final_project.BasketballCard</node>
+    <node x="703.6929509792831" y="213.10317354068397">org.final_project.CardSimMain</node>
+    <node x="510.8212069425184" y="-13.321325392843477">org.final_project.CustomCard</node>
+    <node x="477.4661877853075" y="210.83181836977082">org.final_project.Main</node>
+    <node x="929.9446388212921" y="208.88295321084962">org.final_project.SoccerCard</node>
+    <node x="898.019724676567" y="389.05218300077047">org.final_project.Sport</node>
+    <node x="-92.50384717396503" y="386.80447806211816">org.final_project.CardSimController</node>
+    <node x="755.754275986101" y="42.81130728235871">org.final_project.Card</node>
+    <node x="1299.2425896646557" y="89.40185083435195">org.final_project.FootballCard</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.final_project.FootballCard" target="org.final_project.Card" relationship="GENERALIZATION">
+      <point x="-157.4995896646558" y="-6.222850834351945" />
+      <point x="1003.254" y="143.179" />
+      <point x="1003.254" y="180.0" />
+      <point x="870.754" y="180.0" />
+      <point x="-2.759861009735687E-4" y="48.999692717641295" />
+    </edge>
+    <edge source="org.final_project.SoccerCard" target="org.final_project.Card" relationship="GENERALIZATION">
+      <point x="3.611787078625639E-4" y="-59.99995321084961" />
+      <point x="1084.445" y="180.0" />
+      <point x="870.754" y="180.0" />
+      <point x="-2.759861009735687E-4" y="48.999692717641295" />
+    </edge>
+    <edge source="org.final_project.BasketballCard" target="org.final_project.Card" relationship="GENERALIZATION">
+      <point x="164.499699594704" y="7.124757337351184E-5" />
+      <point x="459.966" y="221.957" />
+      <point x="459.966" y="180.0" />
+      <point x="870.754" y="180.0" />
+      <point x="-2.759861009735687E-4" y="48.999692717641295" />
+    </edge>
+    <edge source="org.final_project.CustomCard" target="org.final_project.Card" relationship="GENERALIZATION">
+      <point x="-2.0694251838904165E-4" y="82.00032539284348" />
+      <point x="599.321" y="180.0" />
+      <point x="870.754" y="180.0" />
+      <point x="-2.759861009735687E-4" y="48.999692717641295" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.4731936149126442" showDependencies="false" x="798.1683115623891" y="466.94851911813015" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
