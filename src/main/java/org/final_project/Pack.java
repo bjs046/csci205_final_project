@@ -77,6 +77,14 @@ public class Pack {
         footballImageList = getImageURL("football");
     }
 
+    /**
+     * getImageURL method that returns an ArrayList of strings. There are URLs that are in the
+     * same order as cards for each sport and are used to display the images on the card
+     *
+     * @param sport
+     * @return list of Strings that are the URLs to images in the same order as the cards
+     * @throws FileNotFoundException
+     */
     public ArrayList<String> getImageURL(String sport) throws FileNotFoundException {
         sport.toLowerCase();
         File soccerFile = new File("src/main/java/org/final_project/SoccerImages.txt");
@@ -212,9 +220,9 @@ public class Pack {
 
 
         Pack testPack = new Pack();
-        System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
+        System.out.println(testPack.drawFootballCard(true).get(0)[0]);
         System.out.println(testPack.URLLink.get(0));
-        System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
+        System.out.println(testPack.drawFootballCard(true).get(0)[0]);
         System.out.println(testPack.URLLink.get(0));
 
     }
