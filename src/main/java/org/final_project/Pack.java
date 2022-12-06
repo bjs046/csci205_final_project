@@ -203,10 +203,20 @@ public class Pack {
     }
 
     public static void main(String[] args) throws IOException{
+        /**
+        Pack testPack = new Pack();
+        System.out.println(testPack.drawFootballCard(true).get(0)[0]);
+        System.out.println(testPack.URLLink.get(0));
+        System.out.println(testPack.drawFootballCard(true).get(0)[0]);
+        System.out.println(testPack.URLLink.get(0));
+         */
+
+
         Pack testPack = new Pack();
         System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
         System.out.println(testPack.URLLink.get(0));
         System.out.println(testPack.drawSoccerCard(true).get(0)[0]);
         System.out.println(testPack.URLLink.get(0));
+
     }
 }
