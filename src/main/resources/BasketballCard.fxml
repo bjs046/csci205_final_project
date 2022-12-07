@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Rectangle2D?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.final_project.CardSimController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" scaleShape="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.final_project.CardSimController">
    <children>
-      <ImageView fx:id="bballCourt" fitHeight="400.0" fitWidth="612.0" layoutX="-6.0">
+      <ImageView fx:id="basketballBackground" fitHeight="400.0" fitWidth="612.0" layoutX="-6.0">
          <image>
             <Image url="@basketballcourt.jpeg" />
          </image>
       </ImageView>
-      <Rectangle fx:id="bballCard" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="250.0" layoutX="225.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
-      <ImageView fx:id="bballCardImage" fitHeight="102.0" fitWidth="131.0" layoutX="249.0" layoutY="98.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+      <Rectangle fx:id="basketballCard" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="250.0" layoutX="225.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <ImageView fx:id="basketballPfp" fitHeight="102.0" fitWidth="131.0" layoutX="236.0" layoutY="98.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@playerpfp.jpg" />
          </image>
          <viewport>
             <Rectangle2D />
          </viewport></ImageView>
-      <Label fx:id="basketballName" layoutX="286.0" layoutY="215.0" text="Name" />
-      <Label fx:id="basketballPosition" layoutX="280.0" layoutY="250.0" text="Position" />
-      <Label fx:id="basketballOverall" layoutX="283.0" layoutY="289.0" text="Overall" />
+      <Text fx:id="basketballName" layoutX="283.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="HP Simplified" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="basketballOverall" layoutX="280.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall">
+         <font>
+            <Font name="HP Simplified" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="basketballPosition" layoutX="278.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position">
+         <font>
+            <Font name="HP Simplified" size="12.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

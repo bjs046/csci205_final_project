@@ -4,6 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.final_project.CardSimController">
@@ -19,8 +20,17 @@
             <Image url="@playerpfp.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="soccerName" layoutX="284.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
-      <Text fx:id="soccerPosition" layoutX="279.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position" />
-      <Text fx:id="soccerOverall" layoutX="281.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall" />
+      <Text fx:id="soccerName" layoutX="284.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="HP Simplified" size="12.0" />
+         </font></Text>
+      <Text fx:id="soccerPosition" layoutX="279.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position">
+         <font>
+            <Font name="HP Simplified" size="12.0" />
+         </font></Text>
+      <Text fx:id="soccerOverall" layoutX="281.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall">
+         <font>
+            <Font name="HP Simplified" size="12.0" />
+         </font></Text>
    </children>
 </AnchorPane>

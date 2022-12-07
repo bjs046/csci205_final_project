@@ -15,4 +15,10 @@ and money of having to go to the store and actually purchase a card pack, instea
 create their own custom cards.
     Our package folder contains our classes for our cards and JavaFX.  The card class is the parent class which 
 contains the enumeration for the sport of the card.  From this parent class are the child classes.  The custom card 
-inherits from the card class 
+inherits from the card class which takes in the name of the user, the user's position, and the user's overall rating.
+The soccer card, football card, and basketball card all inherit from this class as well. They all contain arraylists 
+of all the imported cards and methods that read in the data files.  Then we have the pack class which interacts with 
+the soccer, football, and basketball card classes. In this class is also lists of the URL's for the images of the 
+players.  This class generates a random player from the list with the image that is then given to the FX to display 
+for the pack openings.  Each sport has their own pack and custom cards can be displayed too.
+Third Party Library: JavaFX
