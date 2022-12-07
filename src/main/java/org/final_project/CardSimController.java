@@ -167,7 +167,6 @@ public class CardSimController {
         assert footballName != null : "fx:id=\"footballName\" was not injected: check your FXML file 'Football.fxml'.";
         assert footballOverall != null : "fx:id=\"footballOverall\" was not injected: check your FXML file 'Football.fxml'.";
         assert footballPosition != null : "fx:id=\"footballPosition\" was not injected: check your FXML file 'Football.fxml'.";
-        System.out.println(soccerName);
     }
 
 
@@ -223,12 +222,6 @@ public class CardSimController {
         Parent basketballParent = FXMLLoader.load(getClass().getResource("/BasketballCard.fxml"));
         Scene basketballScene = new Scene(basketballParent);
 
-        Stage basketballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        basketballWindow.setScene(basketballScene);
-        basketballWindow.show();
-
-        //Basketball
         Pack testPack1 = new Pack();
         ArrayList<String[]> cardDrawn1 = testPack1.drawBasketballCard(true);
         String basketballCardName = cardDrawn1.get(0)[0];
@@ -236,19 +229,20 @@ public class CardSimController {
         String basketballCardOverall = cardDrawn1.get(0)[2];
         String basketballCardImage = testPack1.URLLink.get(0);
 
-
-        basketballName = new Text();
-        basketballPosition = new Text();
-        basketballOverall = new Text();
+        Text basketballName = (Text) basketballScene.lookup("#basketballName");
         basketballName.setText(basketballCardName);
+        Text basketballPosition= (Text) basketballScene.lookup("#basketballPosition");
         basketballPosition.setText(basketballCardPosition);
+        Text basketballOverall = (Text) basketballScene.lookup("#basketballOverall");
         basketballOverall.setText(basketballCardOverall);
+        Stage basketballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        basketballWindow.setScene(basketballScene);
         basketballWindow.show();
-
 
         URL basketballURL= new URL(basketballCardImage);
         InputStream is1 = basketballURL.openStream();
+
         FileOutputStream fo1 = new FileOutputStream("src/main/resources/basketballpfp.jpg");
         int x = 0;
         while ((x = is1.read())!=-1) {
@@ -267,12 +261,6 @@ public class CardSimController {
         Parent footballParent = FXMLLoader.load(getClass().getResource("/Football.fxml"));
         Scene footballScene = new Scene(footballParent);
 
-        Stage footballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-        footballWindow.setScene(footballScene);
-        footballWindow.show();
-
-        //Football
         Pack testPack2 = new Pack();
         ArrayList<String[]> cardDrawn2 = testPack2.drawFootballCard(true);
         String footballCardName = cardDrawn2.get(0)[0];
@@ -280,12 +268,20 @@ public class CardSimController {
         String footballCardOverall = cardDrawn2.get(0)[2];
         String footballCardImage = testPack2.URLLink.get(0);
 
+        Text footballName = (Text) footballScene.lookup("#footballName");
         footballName.setText(footballCardName);
+        Text footballPosition = (Text) footballScene.lookup("#footballPosition");
         footballPosition.setText(footballCardPosition);
+        Text footballOverall = (Text) footballScene.lookup("#footballOverall");
         footballOverall.setText(footballCardOverall);
+        Stage footballWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        footballWindow.setScene(footballScene);
+        footballWindow.show();
 
         URL footballURL= new URL(footballCardImage);
         InputStream is2 = footballURL.openStream();
+
         FileOutputStream fo2 = new FileOutputStream("src/main/resources/footballpfp.jpg");
         int y = 0;
         while ((y = is2.read())!=-1) {
@@ -322,21 +318,6 @@ public class CardSimController {
         soccerWindow.setScene(soccerScene);
         soccerWindow.show();
 
-        System.out.println(soccerName);
-
-
-
-
-        System.out.println(soccerName);
-        soccerPosition = new Text();
-        soccerOverall = new Text();
-        //soccerName.setText(soccerCardName);
-        //soccerPosition.setText(soccerCardPosition);
-        //soccerOverall.setText(soccerCardOverall);
-        //soccerWindow.show();
-
-        //Soccer
-
 
         URL soccerURL= new URL(soccerCardImage);
         InputStream is3 = soccerURL.openStream();
@@ -348,7 +329,6 @@ public class CardSimController {
         }
         fo3.close();
         is3.close();
-
     }
 }
 
