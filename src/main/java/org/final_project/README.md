@@ -21,3 +21,4 @@ of all the imported cards and methods that read in the data files.  Then we have
 the soccer, football, and basketball card classes. In this class is also lists of the URL's for the images of the 
 players.  This class generates a random player from the list with the image that is then given to the FX to display 
 for the pack openings.  Each sport has their own pack and custom cards can be displayed too.
+Third Party Library: JavaFX
