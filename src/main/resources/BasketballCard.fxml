@@ -18,22 +18,22 @@
       <Rectangle fx:id="basketballCard" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="250.0" layoutX="225.0" layoutY="75.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
       <ImageView fx:id="basketballPfp" fitHeight="102.0" fitWidth="131.0" layoutX="236.0" layoutY="98.0" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
-            <Image url="@playerpfp.jpg" />
+            <Image url="@basketballpfp.jpg" />
          </image>
          <viewport>
             <Rectangle2D />
          </viewport></ImageView>
-      <Text fx:id="basketballName" layoutX="283.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+      <Text fx:id="basketballName" layoutX="283.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" textAlignment="JUSTIFY">
          <font>
             <Font name="HP Simplified" size="12.0" />
          </font>
       </Text>
-      <Text fx:id="basketballOverall" layoutX="280.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall">
+      <Text fx:id="basketballOverall" layoutX="280.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall" textAlignment="JUSTIFY">
          <font>
             <Font name="HP Simplified" size="12.0" />
          </font>
       </Text>
-      <Text fx:id="basketballPosition" layoutX="278.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position">
+      <Text fx:id="basketballPosition" layoutX="278.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position" textAlignment="JUSTIFY">
          <font>
             <Font name="HP Simplified" size="12.0" />
          </font>

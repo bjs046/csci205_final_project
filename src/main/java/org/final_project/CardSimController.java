@@ -22,6 +22,7 @@ import javafx.scene.shape.Rectangle;
 
 public class CardSimController {
 
+    //variables copied from scene builder skeleton
     @FXML
     private ResourceBundle resources;
 
@@ -132,6 +133,7 @@ public class CardSimController {
     }
 
 
+    //initializing also copied from scene builder skeleton code
     @FXML
     public void initialize() throws IOException{
         assert mainTitle != null : "fx:id=\"mainTitle\" was not injected: check your FXML file 'CardSim.fxml'.";
@@ -176,6 +178,9 @@ public class CardSimController {
      */
     @FXML
     public void changeScene1(ActionEvent event) throws IOException {
+        //scene change code copied from YouTube video
+        //https://www.youtube.com/watch?v=XCgcQTQCfJQ
+        //Tried using code from lab 11 but it caused some issues so I used this alternative method
         Parent startScreenParent = FXMLLoader.load(getClass().getResource("/Pack.fxml"));
         Scene startScreenScene = new Scene(startScreenParent);
 
@@ -222,6 +227,7 @@ public class CardSimController {
         Parent basketballParent = FXMLLoader.load(getClass().getResource("/BasketballCard.fxml"));
         Scene basketballScene = new Scene(basketballParent);
 
+        //Code to simulate opening a pack for basketball, then store the values in a list and store them as variables
         Pack testPack1 = new Pack();
         ArrayList<String[]> cardDrawn1 = testPack1.drawBasketballCard(true);
         String basketballCardName = cardDrawn1.get(0)[0];
@@ -229,6 +235,11 @@ public class CardSimController {
         String basketballCardOverall = cardDrawn1.get(0)[2];
         String basketballCardImage = testPack1.URLLink.get(0);
 
+        //Struggled a lot witht his portion. I had a very niche error where the variables are stored but they are null
+        //so the code never identified them and never changed the text in the GUI
+        //had to get the help of upperclassmen, TAs, and even a graduate student and took a very long time. Learned a lot
+        //from this part and seehow important it is to test, switch the order around, and truly understand
+        //what an error entails and how to possibly solve it
         Text basketballName = (Text) basketballScene.lookup("#basketballName");
         basketballName.setText(basketballCardName);
         Text basketballPosition= (Text) basketballScene.lookup("#basketballPosition");
@@ -240,6 +251,7 @@ public class CardSimController {
         basketballWindow.setScene(basketballScene);
         basketballWindow.show();
 
+        //This part pulls and opens the URL of the image
         URL basketballURL= new URL(basketballCardImage);
         InputStream is1 = basketballURL.openStream();
 
@@ -261,6 +273,7 @@ public class CardSimController {
         Parent footballParent = FXMLLoader.load(getClass().getResource("/Football.fxml"));
         Scene footballScene = new Scene(footballParent);
 
+        //Code to simulate opening a pack for football, then store the values in a list and store them as variables
         Pack testPack2 = new Pack();
         ArrayList<String[]> cardDrawn2 = testPack2.drawFootballCard(true);
         String footballCardName = cardDrawn2.get(0)[0];
@@ -300,6 +313,7 @@ public class CardSimController {
         Parent soccerParent = FXMLLoader.load(getClass().getResource("/Soccer.fxml"));
         Scene soccerScene = new Scene(soccerParent);
 
+        //Code to simulate opening a pack for soccer, then store the values in a list and store them as variables
         Pack testPack3 = new Pack();
         ArrayList<String[]> cardDrawn3 = testPack3.drawSoccerCard(true);
         String soccerCardName = cardDrawn3.get(0)[0];
@@ -316,7 +330,7 @@ public class CardSimController {
         Stage soccerWindow = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
         soccerWindow.setScene(soccerScene);
-        soccerWindow.show();
+
 
 
         URL soccerURL= new URL(soccerCardImage);
@@ -329,6 +343,8 @@ public class CardSimController {
         }
         fo3.close();
         is3.close();
+        soccerWindow.show();
+
     }
 }
 

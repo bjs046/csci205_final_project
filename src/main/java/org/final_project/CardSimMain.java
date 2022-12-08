@@ -9,11 +9,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CardSimMain extends Application {
-
+    //Main class for our GUI
     public static void main(String[] args) {
         launch(args);
     }
 
+    //Loads our main screen
     @Override
     public void start(Stage primaryStage) throws IOException {
         //Loads the FXMLfile. Obtain the root of the scene graph
