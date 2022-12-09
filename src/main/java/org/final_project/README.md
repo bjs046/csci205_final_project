@@ -22,3 +22,7 @@ the soccer, football, and basketball card classes. In this class is also lists o
 players.  This class generates a random player from the list with the image that is then given to the FX to display 
 for the pack openings.  Each sport has their own pack and custom cards can be displayed too.
 Third Party Library: JavaFX
+
+
+VIDEO LINK:
+https://mediaspace.bucknell.edu/media/csci205+final+project/1_1zunyswi
